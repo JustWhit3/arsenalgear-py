@@ -11,7 +11,7 @@ namespace agr
   //     NULL_STREAM
   //====================================================
   //Definition of the null stream.
-  const boost::iostreams::stream<boost::iostreams::null_sink> null_stream 
+  boost::iostreams::stream<boost::iostreams::null_sink> null_stream 
    {
     boost::iostreams::null_sink{} 
    };

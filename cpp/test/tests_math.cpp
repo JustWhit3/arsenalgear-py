@@ -36,3 +36,16 @@ TEST_CASE_TEMPLATE( "Testing the IsInBounds function", T, double )
   CHECK( agr::IsInBounds( var_1, 2.9, 3.1 ) );
   CHECK( agr::IsInBounds( var_2, 0.1, 0.21 ) );
  }
+
+//============================================
+//     PARSED_F
+//============================================
+TEST_CASE( "Testing the parsed_f function." )
+ {
+  CHECK_EQ( agr::parsed_f( "x + y", 1, 2 ), 3 );
+  CHECK_EQ( agr::parsed_f( "cos( x ) - sin( y )", M_PI, M_PI/2 ), -2 );
+  CHECK_EQ( agr::parsed_f( "3*( cos( x ) - sin( y ) )", M_PI, M_PI/2 ), -6 );
+
+  static const double p = agr::parsed_f( "3*( cos( x ) - sin( y ) )", M_PI, M_PI/2 );
+  CHECK_EQ( p, -6 );
+ }

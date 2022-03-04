@@ -10,7 +10,7 @@ namespace agr
   //====================================================
   //     OBJECTS DEFINITION
   //====================================================
-  extern const boost::iostreams::stream<boost::iostreams::null_sink> null_stream;
+  extern boost::iostreams::stream<boost::iostreams::null_sink> null_stream;
  }
 
 #endif

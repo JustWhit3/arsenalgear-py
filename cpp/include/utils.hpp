@@ -1,9 +1,6 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
-// Extra headers
-#include <exprtk.hpp>
-
 // STD headers
 #include <stdexcept>
 #include <functional>
@@ -77,34 +74,6 @@ namespace agr
       return static_cast <T> ( NULL );
      }
     return 1;
-   }
-
-
-  
-
-  //====================================================
-  //     PARSED_F
-  //====================================================
-  // Function used to parse a mathematical function f(x,y).
-  template <typename T_str, typename T_var>
-  extern inline double parsed_f( const T_str& expr, double x, double y )
-   {
-    static exprtk::rtl::io::file::package<double> fileio_package;
-
-    static exprtk::symbol_table <double> symbol_table;
-    symbol_table.add_variable( "x", x );
-    symbol_table.add_variable( "y", y );
-
-    static exprtk::expression <double> expression;
-    expression.register_symbol_table( symbol_table );
-  
-    static exprtk::parser <double> parser;
-    if ( ! parser.compile( expr, expression ) )
-     {
-      throw std::runtime_error( "Error in the inserted expression!" );
-     }
-    
-    return expression.value();
    }
  }
 

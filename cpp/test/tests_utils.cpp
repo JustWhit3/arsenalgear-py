@@ -3,6 +3,7 @@
 
 // My headers
 #include "../include/utils.hpp"
+#include "../include/constants.hpp"
 
 // Extra headers
 #include <doctest.h>
@@ -31,10 +32,10 @@ TEST_CASE( "Testing the maxptr function." )
 //====================================================
 TEST_CASE_TEMPLATE( "Testing the check_condition function.", T, std::string, const char* )
  {
-  const T test_string = "nice", null_str = "";
+  const T test_string = "nice";
 
-  CHECK_EQ( agr::check_condition( [](){ return 3 < 4; }, test_string, null_str ), test_string );
-  CHECK_EQ( agr::check_condition( [](){ return 3 > 4; }, test_string, null_str ), null_str );
+  CHECK_EQ( agr::check_condition( [](){ return 3 < 4; }, test_string, agr::null_str<T> ), test_string );
+  CHECK_EQ( agr::check_condition( [](){ return 3 > 4; }, test_string, agr::null_str<T> ), agr::null_str<T> );
  }
 
 //====================================================
@@ -81,17 +82,4 @@ TEST_CASE( "Testing the one function." )
      }
     counter_.push_back( element );
    }
- }
-
-//============================================
-//     PARSED_F
-//============================================
-TEST_CASE( "Testing the parsed_f function." )
- {
-  CHECK_EQ( agr::parsed_f( "x + y", 1, 2 ), 3 );
-  CHECK_EQ( agr::parsed_f( "cos( x ) - sin( y )", M_PI, M_PI/2 ), -2 );
-  CHECK_EQ( agr::parsed_f( "3*( cos( x ) - sin( y ) )", M_PI, M_PI/2 ), -6 );
-
-  static const double p = agr::parsed_f( "3*( cos( x ) - sin( y ) )", M_PI, M_PI/2 );
-  CHECK_EQ( p, -6 );
  }
