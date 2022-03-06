@@ -23,8 +23,6 @@ void math()
   // Roundoff
   std::cout << "Round " << 3.546 << " until 2-nd precision digits after comma: " 
             << agr::roundoff( 3.546, 2 ) << "." << std::endl << std::endl;
-  std::cout << "Round " << 3.5 << " to the integer value: " << agr::roundoff( 3.5 ) 
-            << "." << std::endl << std::endl; 
 
   // isInBounds
   std::cout << "Check if 3 is between 2 and 4: " << agr::IsInBounds( 3, 2, 4 ) << " (True)." 

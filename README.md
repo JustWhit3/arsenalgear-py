@@ -24,7 +24,9 @@
 
 ## Introduction
 
-This library contains a set of generic utils (functions and classes) I developed for other projects. There are several sub-headers related to various topics (math, iostream and others). There are several folders related to each programming languages I developed tools for. You can simply enter one of the folder with language name and explore the various tools. You can also easily install the library using one of the installation scripts of the [scripts](https://github.com/JustWhit3/arsenalgear/tree/main/scripts) folder. New and current library tools are constantly updated and added once a new function / class is required for other projects.
+This library contains a set of generic utils (functions and classes) I developed for other projects. There are several sub-headers related to various topics (math, iostream and others). There are folders related to each programming languages I developed tools for. You can simply enter one of the folder with a language name and explore the various tools. You can also easily install the library using one of the installation scripts of the [scripts](https://github.com/JustWhit3/arsenalgear/tree/main/scripts) folder and run an example code for each programming language.
+
+Existing tools are constantly updated and new ones are added once their development is required for other projects.
 
 Some projects in which I am using this library are, for example: [osmanip](https://github.com/JustWhit3/osmanip) and [SAFD-algorithm](https://github.com/JustWhit3/SAFD-algorithm).
 
@@ -86,9 +88,23 @@ General documentation:
 
 Documentation for the [cpp](https://github.com/JustWhit3/arsenalgear/tree/main/cpp) folder:
 
+- [Code structure](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/doc/Code%20structure.md): contains a detailed list of the `cpp` objects of the repository and how to use them.
+- [Download, install and run](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/doc/Download%2C%20install%20and%20run.md): contains instructions about how to install, download and run the repository code and extra information about the scripts of the [scripts](https://github.com/JustWhit3/arsenalgear/tree/main/scripts) folder.
+
 ## News from the last release
 
+Nothing for the moment, since this is the first beta release.
+
 ## List of features
+
+Here you can find the list of features implemented in the current version of the library:
+
+- **cpp** headers:
+  - [Constants](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/constants.hpp): contains a list of constants developed for utility.
+  - [Math](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp): contains a list of mathematical tools.
+  - [Operators](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/operators.hpp): contains a list of operators redefinition.
+  - [Stream](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/stream.hpp): contains a list of input / output stream tools.
+  - [Utils](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/utils.hpp): contains a list of generic utils which don't fit any of the other categories.
 
 ## Credits
 

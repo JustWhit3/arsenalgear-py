@@ -13,22 +13,12 @@ namespace agr
   //     ROUNDOFF
   //====================================================
   // Function to round a floating point to n-th decimal place.
-
-  // 1-st overload:
   template <typename T>
   extern inline T roundoff( const T& value, const unsigned char prec )
    {
     T pow_10 = pow( 10.0f, static_cast <T> ( prec ) );
 
     return round( value * pow_10 ) / pow_10;
-   }
-
-  // 2-nd overload:
-  template <typename T>
-  extern inline T roundoff( const T& value )
-   {
-    if( value < 0 ) return ceil( value - 0.5 );
-    else return floor( value + 0.5 );
    }
 
   //====================================================

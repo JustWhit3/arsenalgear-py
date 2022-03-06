@@ -15,15 +15,9 @@ TEST_CASE_TEMPLATE( "Testing the roundoff function.", T, double )
   T var_2 = 3.456;
   T var_3 = 345.56;
 
-  // 1-st overload:
   CHECK_EQ( agr::roundoff( var, 1 ), 3.3 );
   CHECK_EQ( agr::roundoff( var_2, 2 ), 3.46 );
   CHECK_EQ( agr::roundoff( var_3, 1 ), 345.6 );
-
-  // 2-nd overload:
-  CHECK_EQ( agr::roundoff( var ), 3 );
-  CHECK_EQ( agr::roundoff( var_2 ), 3 );
-  CHECK_EQ( agr::roundoff( var_3 ), 346 );
  }
 
 //============================================
