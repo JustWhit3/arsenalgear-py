@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/JustWhit3/osmanip/blob/main/img/logo.svg" height=220></p>
+<p align="center"><img src="https://github.com/JustWhit3/arsenalgear/tree/main/logo/logo.svg" height=220></p>
 
 <h3 align="center">A library containing general purpose utils (mainly functions and classes) I developed for other projects, using different languages</h3>
 <p align="center">
@@ -73,6 +73,7 @@ arsenalgear/
 │   ├── uninstall_cpp.sh
 │   ├── debug.sh
 │   ├── update.sh
+├── img/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
