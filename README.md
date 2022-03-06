@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/JustWhit3/arsenalgear/blob/main/img/logo.svg" height=220></p>
 
-<h3 align="center">A library containing general purpose utils (mainly functions and classes) I developed for other projects, using different languages</h3>
+<h3 align="center">A library containing general purpose utils I developed for other projects, using different languages</h3>
 <p align="center">
     <img title="v0.0" alt="v0.0" src="https://img.shields.io/badge/version-v0.0-informational?style=flat-square"
     <a href="LICENSE">
