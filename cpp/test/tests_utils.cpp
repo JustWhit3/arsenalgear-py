@@ -28,17 +28,6 @@ TEST_CASE( "Testing the maxptr function." )
  }
 
 //====================================================
-//     CHECK_CONDITION
-//====================================================
-TEST_CASE_TEMPLATE( "Testing the check_condition function.", T, std::string, const char* )
- {
-  const T test_string = "nice";
-
-  CHECK_EQ( agr::check_condition( [](){ return 3 < 4; }, test_string, agr::null_str<T> ), test_string );
-  CHECK_EQ( agr::check_condition( [](){ return 3 > 4; }, test_string, agr::null_str<T> ), agr::null_str<T> );
- }
-
-//====================================================
 //     ISFLOATINGPOINT
 //====================================================
 TEST_CASE_TEMPLATE( "Testing the isFLoatingPoint function.", T, double, float, long double )

@@ -73,10 +73,6 @@ void utils()
   // std::cout << "Runtime error function example: ";
   // throw agr::runtime_error_func( "Inserted command", "<command>", "is not supported!" );
 
-  // check_condition
-  std::cout << "Check if 3 < 4 and in positive case return 34 else return 43: " 
-            << agr::check_condition( [](){ return 3 < 4; }, 34, 43 ) << "." << std::endl << std::endl;
-
   // isFLoatingPoint
   std::cout << "Check if 0.00034 is a floating point: " << agr::isFloatingPoint( 0.00034 ) 
             << " (True)." << std::endl << std::endl;

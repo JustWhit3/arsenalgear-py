@@ -18,7 +18,6 @@
 - [Utils](#utils)
   - [maxptr](#maxptr)
   - [runtime_error_func](#runtimeerrorfunc)
-  - [check_condition](#checkcondition)
   - [isFloatingPoint](#isFloatingPoint)
   - [one](#one)
 
@@ -156,18 +155,6 @@ Complete definition (1-st overload): `template <typename T_var> extern inline st
 Usage: function used to throw customized runtime error.
 
 Example usage: `throw agr::runtime_error_func( "This variable", var, "is not supported!" )`
-
-### check_condition
-
-Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `template <typename T> extern inline T check_condition( const std::function <bool()>& condition, const T& return_it, const T& return_false )`
-
-Usage: function used to check if a given expression is true and in positive case return something else return something else.
-
-Example usage: `agr::check_condition( [ = ] { return isFloatingPoint( variable ); }, 1, 100 )`
 
 ### isFloatingPoint
 
