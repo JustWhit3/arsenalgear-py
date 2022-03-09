@@ -15,18 +15,18 @@ namespace agr
   // Function used to find the maximum value of a generic pointer containing listed values.
   // NB: second argument is the pointer dimension.
   template <typename T>
-  extern inline T maxptr ( T *ptr, int a )
+  extern inline T maxptr ( T *ptr, int ptr_dim )
    {
-    if ( a == 1 ) return *ptr;
-    return *ptr > ( a = maxptr ( ptr + 1, a - 1 ) ) ? *ptr : a;
+    if( ptr_dim == 1 ) return *ptr;
+    return *ptr > ( ptr_dim = maxptr( ptr + 1, ptr_dim - 1 ) ) ? *ptr : ptr_dim;
    }
 
   //====================================================
   //     RUNTIME_THROWER
   //====================================================
   // Function used to throw customized runtime error.
-  template <typename T_var>
-  extern inline std::runtime_error runtime_error_func( const std::string& beg, T_var variable, const std::string& end )
+  template <typename T>
+  extern inline std::runtime_error runtime_error_func( const std::string& beg, T variable, const std::string& end )
    {
     static std::string error = beg + 
                                static_cast <std::string>(" \"") + 
@@ -35,17 +35,6 @@ namespace agr
                                end;
 
     return std::runtime_error( error ); 
-   }
-
-  //====================================================
-  //     CHECK_CONDITION
-  //====================================================
-  // Function to check if a condition is verified and in positive case, return it, else return other.
-  template <typename T>
-  extern inline T check_condition( const std::function <bool()>& condition, const T& return_it, const T& return_false )
-   {
-    if( condition() ) return return_it;
-    else return return_false;
    }
 
   //====================================================

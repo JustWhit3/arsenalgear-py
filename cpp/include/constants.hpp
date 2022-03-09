@@ -7,10 +7,10 @@
 namespace agr
  {
   template <typename T>
-  extern const T null_str = "";
+  extern inline const T null_str = "";
 
   template <typename T>
-  extern const T empty_space = " ";
+  extern inline const T empty_space = " ";
  }
 
 #endif

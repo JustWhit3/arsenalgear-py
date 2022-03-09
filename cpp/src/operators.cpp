@@ -5,11 +5,11 @@
 //     STRING * INT
 //====================================================
 //Multiply a string by an integer.
-std::string operator * ( const std::string& generic_string, unsigned int integer ) 
+std::string operator *( const std::string& generic_string, unsigned int integer ) 
  {
   std::string output = "";
 
-  while ( integer -- ) 
+  while( integer -- ) 
    {
     output += generic_string;
    }
@@ -21,7 +21,7 @@ std::string operator * ( const std::string& generic_string, unsigned int integer
 //     INT * STRING
 //====================================================
 //Multiply an integer by a string.
-std::string operator * ( unsigned int integer, const std::string& generic_string ) 
+std::string operator *( unsigned int integer, const std::string& generic_string ) 
  {
   return generic_string * integer;
  }

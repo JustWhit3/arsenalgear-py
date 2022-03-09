@@ -2,7 +2,7 @@
 
 <h3 align="center">A library containing general purpose utils I developed for other projects, using different languages</h3>
 <p align="center">
-    <img title="v0.0" alt="v0.0" src="https://img.shields.io/badge/version-v0.0-informational?style=flat-square"
+    <img title="v0.1" alt="v0.1" src="https://img.shields.io/badge/version-v0.1-informational?style=flat-square"
     <a href="LICENSE">
         <img title="MIT License" alt="license" src="https://img.shields.io/badge/license-MIT-informational?style=flat-square">
     </a>

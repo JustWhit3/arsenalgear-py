@@ -12,11 +12,11 @@ namespace agr
   //====================================================
   //     ROUNDOFF
   //====================================================
-  // Function to round a floating point to n-th decimal place.
+  // Function to round a floating point to n-th decimal place after comma.
   template <typename T>
   extern inline T roundoff( const T& value, const unsigned char prec )
    {
-    T pow_10 = pow( 10.0f, static_cast <T> ( prec ) );
+    T pow_10 = pow( 10.0f, static_cast<T> ( prec ) );
 
     return round( value * pow_10 ) / pow_10;
    }
@@ -35,19 +35,19 @@ namespace agr
   //     PARSED_F
   //====================================================
   // Function used to parse a mathematical function f(x,y).
-  template <typename T_str>
-  extern inline double parsed_f( const T_str& expr, double x, double y )
+  template <typename T>
+  extern inline double parsed_f( const T& expr, double x, double y )
    {
     static exprtk::rtl::io::file::package<double> fileio_package;
 
-    static exprtk::symbol_table <double> symbol_table;
+    static exprtk::symbol_table<double> symbol_table;
     symbol_table.add_variable( "x", x );
     symbol_table.add_variable( "y", y );
 
-    static exprtk::expression <double> expression;
+    static exprtk::expression<double> expression;
     expression.register_symbol_table( symbol_table );
   
-    static exprtk::parser <double> parser;
+    static exprtk::parser<double> parser;
     if ( ! parser.compile( expr, expression ) )
      {
       throw std::runtime_error( "Error in the inserted expression!" );

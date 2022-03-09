@@ -63,7 +63,7 @@ Namespace: `agr`
 
 Complete definition: `template <typename T> extern inline T roundoff( const T& value, const unsigned char prec )`
 
-Usage: it is used to round the value of a floating point at the `prec` decimal point.
+Usage: it is used to round the value of a floating point at the `prec` decimal point after comma.
 
 Example usage: `agr::roundoff( 123.4, 2 )`
 

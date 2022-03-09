@@ -7,7 +7,7 @@
 //====================================================
 //     OPERATOR * DEFINITION
 //====================================================
-extern std::string operator * ( const std::string& generic_string, unsigned int integer );
-extern std::string operator * ( unsigned int integer, const std::string& generic_string );
+extern std::string operator *( const std::string& generic_string, unsigned int integer );
+extern std::string operator *( unsigned int integer, const std::string& generic_string );
 
 #endif

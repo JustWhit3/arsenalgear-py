@@ -18,6 +18,7 @@ TEST_CASE_TEMPLATE( "Testing the roundoff function.", T, double )
   CHECK_EQ( agr::roundoff( var, 1 ), 3.3 );
   CHECK_EQ( agr::roundoff( var_2, 2 ), 3.46 );
   CHECK_EQ( agr::roundoff( var_3, 1 ), 345.6 );
+  CHECK_EQ( agr::roundoff( 0.0034, 3 ), 0.003 );
  }
 
 //============================================

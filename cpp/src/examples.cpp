@@ -30,7 +30,7 @@ void math()
 
   // parsed_f
   std::cout << "Parsing cos(x) + sin(y) for x=pi/2 and y=pi/4: " << agr::parsed_f( "cos(x)+sin(y)", M_PI/2, M_PI/4 ) 
-            << "." << std::endl << std::endl;
+            << "." << std::endl;
  }
 
 //====================================================
@@ -45,7 +45,7 @@ void operators()
 
   // * strings by an integer:
   std::string a = "a";
-  std::cout << "Multiplying \"a\" for 5 times: " << a * 5 << "." << std::endl << std::endl;
+  std::cout << "Multiplying \"a\" for 5 times: " << a * 5 << "." << std::endl;
  }
 
 //====================================================
