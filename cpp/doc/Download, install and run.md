@@ -67,7 +67,7 @@ cd arsenalgear
 
 ## Prerequisites
 
-All the prerequisites can be installed during the first step of the automatic installation with [script](https://github.com/JustWhit3/arsenalgear/blob/main/scripts/install_cpp.sh).
+All the prerequisites can be installed during the first step of the automatic installation with the installer [script](https://github.com/JustWhit3/arsenalgear/blob/main/scripts/install_cpp.sh).
 
 ### Mandatory
 
@@ -108,7 +108,7 @@ From the repository folder type this command on the shell:
 ```
 Then, you can reinstall the repository:
 ```shell
-./scripts/install.sh
+./scripts/install_cpp.sh
 ```
 
 ## Uninstall
@@ -158,6 +158,7 @@ To compile them I prepared a [Makefile](https://github.com/JustWhit3/arsenalgear
 make
 ```
 This will compile both main and test codes. An extra **obj** folder with object files and a **bin** folder with two executables, *main* and *tests*, are now created.
+>**NOTE**: compilation may be slow due to the expensive operation of the `parsed_f` function, which uses the ExprTK library.
 
 You have simply to run the former in order to run the entire example code:
 ```shell

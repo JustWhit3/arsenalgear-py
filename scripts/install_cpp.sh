@@ -19,8 +19,8 @@ if [ $word_m == "y" ] || [ $word_m == "Y" ] ; then
     wget https://github.com/ArashPartow/exprtk/archive/$exprtk_sha1.zip
     mv $exprtk_sha1.zip exprtk-$exprtk_sha1.zip
     unzip exprtk-$exprtk_sha1.zip
-    sudo cp exprtk-$exprtk_sha1/exprtk.hpp /usr/local/include/
-    rm exprtk-$exprtk_sha1.zip
+    sudo cp exprtk-$exprtk_sha1/exprtk.hpp /usr/include/
+    rm -rf exprtk-*
 fi
 echo ""
 read -p "Do you want to install optional prerequisites (y/n)? " word_o
