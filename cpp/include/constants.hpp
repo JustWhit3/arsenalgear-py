@@ -1,9 +1,6 @@
 #ifndef CONSTANTS_HPP
 #define CONSTANTS_HPP
 
-// STD headers
-#include <string>
-
 namespace agr
  {
   template <typename T>
