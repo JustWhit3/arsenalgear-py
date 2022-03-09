@@ -64,7 +64,7 @@ void utils()
   for( int i = 0; i < 5; i++ ) 
    {
     ptr[i] = i;
-    std::cout << ptr[i] << agr::empty_space<std::string>;
+    std::cout << ptr[i] << agr::empty_space<std::string_view>;
    }
   std::cout << "} -> " << agr::maxptr( ptr, 5 ) << "." << std::endl << std::endl;
 
