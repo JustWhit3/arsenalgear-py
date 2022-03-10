@@ -12,7 +12,7 @@ fi
 #====================================================
 #     INSTALLING PREREQUISITES
 #====================================================
-sudo apt install build-essential g++ libboost-all-dev
+sudo apt install build-essential g++ libboost-all-dev wget unzip
 echo ""
 echo "Installing ExprTk library..."
 exprtk_sha1=ca5c577917646ddba3f71ce6d5dd7d01f351ee80

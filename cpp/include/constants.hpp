@@ -4,10 +4,10 @@
 namespace agr
  {
   template <typename T>
-  extern inline const T null_str = "";
+  inline const T null_str = "";
 
   template <typename T>
-  extern inline const T empty_space = " ";
+  inline const T empty_space = " ";
  }
 
 #endif

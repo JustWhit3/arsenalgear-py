@@ -35,7 +35,7 @@ Header file and source code: [constants.hpp](https://github.com/JustWhit3/arsena
 
 Namespace: `agr`
 
-Complete definition: `template <typename T> extern const T null_str = ""`
+Complete definition: `template <typename T> inline const T null_str = ""`
 
 Usage: it is used to define the empty string generalizing its type to `std::string` or `const char*` regarding to the context.
 
@@ -47,7 +47,7 @@ Header file and source code: [constants.hpp](https://github.com/JustWhit3/arsena
 
 Namespace: `agr`
 
-Complete definition: `template <typename T> extern const T empty_space = " "`
+Complete definition: `template <typename T> inline const T empty_space = " "`
 
 Usage: it is used to define the empty string space with different type (`std::string` or `const char*`) regarding to the context.
 
@@ -94,7 +94,7 @@ Example usage: `agr::parsed_f( "cos(x)+sin(y)", M_PI, M_PI/4 )`
 
 ## Operators
 
-### std::string * int (and vice-versa)
+### std::string types * int (and vice-versa)
 
 Header file: [operators.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
 
@@ -102,10 +102,10 @@ Source code: [operators.cpp](https://github.com/JustWhit3/arsenalgear/blob/main/
 
 Namespace: `agr`
 
-Complete definition (1-st overload): `extern std::string operator * ( const std::string& generic_string, unsigned int integer )`
-Complete definition (2-nd overload): `extern std::string operator * ( unsigned int integer, const std::string& generic_string )`
+Complete definition (1-st overload): `template <typename T> extern std::string operator *( const T& generic_string, unsigned int integer )`
+Complete definition (2-nd overload): `template <typename T> extern std::string operator *( unsigned int integer, const T& generic_string )`
 
-Usage: it is used to allow multiplications of a string by an integer.
+Usage: it is used to allow multiplications of a string-type object by an integer.
 
 Example usage: 
 
