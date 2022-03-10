@@ -12,16 +12,15 @@ fi
 #====================================================
 #     INSTALLING PREREQUISITES
 #====================================================
-read -p "Do you want to install mandatory arsenalgear prerequisites (y/n)? " word_m
-if [ $word_m == "y" ] || [ $word_m == "Y" ] ; then
-    sudo apt install build-essential g++ libboost-all-dev
-    exprtk_sha1=ca5c577917646ddba3f71ce6d5dd7d01f351ee80
-    wget https://github.com/ArashPartow/exprtk/archive/$exprtk_sha1.zip
-    mv $exprtk_sha1.zip exprtk-$exprtk_sha1.zip
-    unzip exprtk-$exprtk_sha1.zip
-    sudo cp exprtk-$exprtk_sha1/exprtk.hpp /usr/include/
-    rm -rf exprtk-*
-fi
+sudo apt install build-essential g++ libboost-all-dev
+echo ""
+echo "Installing ExprTk library..."
+exprtk_sha1=ca5c577917646ddba3f71ce6d5dd7d01f351ee80
+wget https://github.com/ArashPartow/exprtk/archive/$exprtk_sha1.zip
+mv $exprtk_sha1.zip exprtk-$exprtk_sha1.zip
+unzip exprtk-$exprtk_sha1.zip
+sudo cp exprtk-$exprtk_sha1/exprtk.hpp /usr/include/
+rm -rf exprtk-*
 echo ""
 read -p "Do you want to install optional arsenalgear prerequisites (y/n)? " word_o
 if [ $word_o == "y" ] || [ $word_o == "Y" ] ; then
@@ -65,7 +64,6 @@ lib_var=$(stat -c%s "lib")
 var=$(expr $include_var + $lib_var)
 read -p "Installation of arsenalgear will take up $var bytes of disk space. Would you like to continue (y/n)? " word
 if [ $word == "y" ] || [ $word == "Y" ] ; then
-    echo "Enter your password for the last installation step:"
     sudo echo "Installing arsenalgear header files into /usr/local/include folder..."
     sudo mkdir -p /usr/local/include/arsenalgear
     if ! ( sudo cp -r include/* /usr/local/include/arsenalgear ) ; then
