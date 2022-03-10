@@ -38,7 +38,7 @@ namespace agr
   template <typename T>
   inline double parsed_f( const T& expr, double x, double y )
    {
-    static exprtk::rtl::io::file::package<double> fileio_package;
+    exprtk::rtl::io::file::package<double> fileio_package;
 
     static exprtk::symbol_table<double> symbol_table;
     symbol_table.add_variable( "x", x );
