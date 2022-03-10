@@ -12,7 +12,7 @@ fi
 #====================================================
 #     INSTALLING PREREQUISITES
 #====================================================
-read -p "Do you want to install mandatory prerequisites (y/n)? " word_m
+read -p "Do you want to install mandatory arsenalgear prerequisites (y/n)? " word_m
 if [ $word_m == "y" ] || [ $word_m == "Y" ] ; then
     sudo apt install build-essential g++ libboost-all-dev
     exprtk_sha1=ca5c577917646ddba3f71ce6d5dd7d01f351ee80
@@ -23,7 +23,7 @@ if [ $word_m == "y" ] || [ $word_m == "Y" ] ; then
     rm -rf exprtk-*
 fi
 echo ""
-read -p "Do you want to install optional prerequisites (y/n)? " word_o
+read -p "Do you want to install optional arsenalgear prerequisites (y/n)? " word_o
 if [ $word_o == "y" ] || [ $word_o == "Y" ] ; then
     sudo apt install doctest-dev subversion valgrind cppcheck clang-format
 fi
@@ -35,21 +35,21 @@ echo ""
 #====================================================
 cd cpp || exit
 if [ -f "/usr/include/doctest.h" ] ; then
-    echo "Compiling the whole code..."
+    echo "Compiling the whole arsenalgear code..."
     if ! make ; then
         echo "Compilation failed!"
         exit
     fi
 elif [ -f "/usr/include/doctest/doctest.h" ] ; then
     echo "Doctest is installed in /usr/include/doctest folder, move it in /usr/include in order to correctly use it for the library tests!"
-    echo "Compiling only the main code (this is not a problem for the installation)..."
+    echo "Compiling only the main code of arsenalgear (this is not a problem for the installation)..."
     if ! make $main ; then
         echo "Compilation failed!"
         exit
     fi
 else
     echo "Doctest is not installed, cannot compile the test codes!"
-    echo "Compiling only the main code (this is not a problem for the installation)..."
+    echo "Compiling only the main code of arsenalgear (this is not a problem for the installation)..."
     if ! make $main ; then
         echo "Compilation failed!"
         exit
@@ -63,7 +63,7 @@ echo ""
 include_var=$(stat -c%s "include")
 lib_var=$(stat -c%s "lib")
 var=$(expr $include_var + $lib_var)
-read -p "Installation will take up $var bytes of disk space. Would you like to continue (y/n)? " word
+read -p "Installation of arsenalgear will take up $var bytes of disk space. Would you like to continue (y/n)? " word
 if [ $word == "y" ] || [ $word == "Y" ] ; then
     echo "Enter your password for the last installation step:"
     sudo echo "Installing arsenalgear header files into /usr/local/include folder..."
