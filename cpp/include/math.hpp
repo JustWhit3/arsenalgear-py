@@ -14,7 +14,7 @@ namespace agr
   //====================================================
   // Function to round a floating point to n-th decimal place after comma.
   template <typename T>
-  extern inline T roundoff( const T& value, const unsigned char prec )
+  inline T roundoff( const T& value, const unsigned char prec )
    {
     T pow_10 = pow( 10.0f, static_cast<T> ( prec ) );
 
@@ -26,7 +26,7 @@ namespace agr
   //====================================================
   // Function to check if a number lies in a certain bound or not.
   template <typename T>
-  extern inline bool IsInBounds( const T& value, const T& low, const T& high )
+  inline bool IsInBounds( const T& value, const T& low, const T& high )
    {
     return !( value < low ) && ( value < high );
    } 
@@ -36,7 +36,7 @@ namespace agr
   //====================================================
   // Function used to parse a mathematical function f(x,y).
   template <typename T>
-  extern inline double parsed_f( const T& expr, double x, double y )
+  inline double parsed_f( const T& expr, double x, double y )
    {
     static exprtk::rtl::io::file::package<double> fileio_package;
 

@@ -15,7 +15,7 @@ namespace agr
   // Function used to find the maximum value of a generic pointer containing listed values.
   // NB: second argument is the pointer dimension.
   template <typename T>
-  extern inline T maxptr ( T *ptr, int ptr_dim )
+  inline T maxptr ( T *ptr, int ptr_dim )
    {
     if( ptr_dim == 1 ) return *ptr;
     return *ptr > ( ptr_dim = maxptr( ptr + 1, ptr_dim - 1 ) ) ? *ptr : ptr_dim;
@@ -26,7 +26,7 @@ namespace agr
   //====================================================
   // Function used to throw customized runtime error.
   template <typename T>
-  extern inline std::runtime_error runtime_error_func( const std::string& beg, T variable, const std::string& end )
+  inline std::runtime_error runtime_error_func( const std::string& beg, T variable, const std::string& end )
    {
     static std::string error = beg + 
                                static_cast <std::string>(" \"") + 
@@ -42,7 +42,7 @@ namespace agr
   //====================================================
   // Function to check if an expression is a floating point or not.
   template <typename T>
-  extern inline bool isFloatingPoint( const T& expression )
+  inline bool isFloatingPoint( const T& expression )
    {
     return std::is_floating_point <T>::value;
    }
@@ -52,7 +52,7 @@ namespace agr
   //====================================================
   // Function to find the incremented unit of a loop.
   template <typename T>
-  extern inline T one( const T& iterating_var )
+  inline T one( const T& iterating_var )
    {
     static std::vector<T> counter_( 2 );
 

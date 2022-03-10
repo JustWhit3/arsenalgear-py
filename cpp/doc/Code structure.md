@@ -61,7 +61,7 @@ Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear
 
 Namespace: `agr`
 
-Complete definition: `template <typename T> extern inline T roundoff( const T& value, const unsigned char prec )`
+Complete definition: `template <typename T> inline T roundoff( const T& value, const unsigned char prec )`
 
 Usage: it is used to round the value of a floating point at the `prec` decimal point after comma.
 
@@ -73,7 +73,7 @@ Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear
 
 Namespace: `agr`
 
-Complete definition: `template <typename T> extern inline bool IsInBounds( const T& value, const T& low, const T& high )`
+Complete definition: `template <typename T> inline bool IsInBounds( const T& value, const T& low, const T& high )`
 
 Usage: it is used to check if a value is the bound [`low`,`high`].
 
@@ -85,7 +85,7 @@ Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear
 
 Namespace: `agr`
 
-Complete definition: `template <typename T> extern inline double parsed_f( const T_str& expr, double x, double y )`
+Complete definition: `template <typename T> inline double parsed_f( const T_str& expr, double x, double y )`
 
 Usage: it is used to parse a string containing a two-variables function signature into a real cpp function in two points.
 >**NOTE**: the signature will be changed in order to extend the function to an n-variables function parser.
@@ -138,7 +138,7 @@ Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgea
 
 Namespace: `agr`
 
-Complete definition (1-st overload): `template <typename T> extern inline T maxptr ( T *ptr, int a )`
+Complete definition (1-st overload): `template <typename T> inline T maxptr ( T *ptr, int a )`
 
 Usage: function used to find the maximum value of a pointer of dimension `a`
 
@@ -150,7 +150,7 @@ Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgea
 
 Namespace: `agr`
 
-Complete definition (1-st overload): `template <typename T_var> extern inline std::runtime_error runtime_error_func( const std::string& beg, T_var variable, const std::string& end )`
+Complete definition (1-st overload): `template <typename T_var> inline std::runtime_error runtime_error_func( const std::string& beg, T_var variable, const std::string& end )`
 
 Usage: function used to throw customized runtime error.
 
@@ -162,7 +162,7 @@ Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgea
 
 Namespace: `agr`
 
-Complete definition (1-st overload): `template <typename T> extern inline bool isFloatingPoint( const T& expression )`
+Complete definition (1-st overload): `template <typename T> inline bool isFloatingPoint( const T& expression )`
 
 Usage: function used to check if an expression is a floating point (double, float or variations) or not.
 
@@ -174,7 +174,7 @@ Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgea
 
 Namespace: `agr`
 
-Complete definition (1-st overload): `template <typename T> extern inline T one( const T& iterating_var )`
+Complete definition (1-st overload): `template <typename T> inline T one( const T& iterating_var )`
 
 Usage: function used to find the incremented unit of a loop.
 
