@@ -45,7 +45,8 @@ void operators()
 
   // * strings by an integer:
   std::string a = "a";
-  std::cout << "Multiplying \"a\" for 5 times: " << a * 5 << "." << std::endl;
+  std::cout << "Multiplying \"a\" for 5 times: " << a * 5 << agr::empty_space<std::string_view> * 5
+            << "adding spaces." << std::endl;
  }
 
 //====================================================
@@ -64,7 +65,7 @@ void utils()
   for( int i = 0; i < 5; i++ ) 
    {
     ptr[i] = i;
-    std::cout << ptr[i] << agr::empty_space<std::string_view>;
+    std::cout << ptr[i] << agr::empty_space<std::string>;
    }
   std::cout << "} -> " << agr::maxptr( ptr, 5 ) << "." << std::endl << std::endl;
 
