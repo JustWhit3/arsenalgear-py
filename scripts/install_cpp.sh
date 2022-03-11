@@ -59,10 +59,10 @@ echo ""
 #====================================================
 #     SAVING FILES INTO THE SYSTEM
 #====================================================
-include_var=$(stat -c%s "include")
-lib_var=$(stat -c%s "lib")
-var=$(expr $include_var + $lib_var)
-read -p "Installation of arsenalgear will take up $var bytes of disk space. Would you like to continue (y/n)? " word
+echo "Installation will take up this number of bytes:"
+du -sbh lib include
+echo ""
+read -p "Would you like to continue (y/n)? " word
 if [ $word == "y" ] || [ $word == "Y" ] ; then
     sudo echo "Installing arsenalgear header files into /usr/local/include folder..."
     sudo mkdir -p /usr/local/include/arsenalgear
