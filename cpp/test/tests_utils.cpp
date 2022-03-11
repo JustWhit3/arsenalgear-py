@@ -72,3 +72,12 @@ TEST_CASE( "Testing the one function." )
     counter_.push_back( element );
    }
  }
+
+//====================================================
+//     MULTI
+//==================================================== 
+TEST_CASE( "Testing the multi function." )
+ {
+  CHECK_EQ( agr::multi( "this", 2 ), "thisthis" );
+  CHECK_EQ( agr::multi( "a ", 5 ), "a a a a a " );
+ }

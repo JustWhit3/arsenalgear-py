@@ -68,6 +68,7 @@ arsenalgear/
 │   │   ├── tests_utils.cpp
 │   ├── Makefile
 │   ├── .clang-format
+│   ├── .valgrindrc
 ├── scripts/
 │   ├── install_cpp.sh
 │   ├── uninstall_cpp.sh
@@ -78,7 +79,6 @@ arsenalgear/
 ├── LICENSE
 ├── CONTRIBUTING.md
 ├── CITATION.cff
-├── .valgrindrc
 ├── .gitignore
 ├── .all-contributorsrc
 ```

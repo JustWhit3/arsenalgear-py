@@ -184,3 +184,19 @@ Example usage:
 static std::vector <int> v { 1, 2 };
 for( const auto & element: v ) std::cout << agr::one( element );
 ```
+
+### multi
+
+Header file : [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+
+Source code: [utils.cpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.cpp)
+
+Namespace: `agr`
+
+Complete definition (1-st overload): `extern std::string multi( const std::string& element, const int& n_times )`
+
+Usage: function used to return a certain string `element` for `n_times` times.
+
+Example usage:
+
+`agr::multi( "repeat", 5 )`

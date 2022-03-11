@@ -10,6 +10,11 @@
 namespace agr
  {
   //====================================================
+  //     FUNCTIONS DEFINITION
+  //====================================================
+  extern std::string multi( const std::string& element, const int& n_times );
+  
+  //====================================================
   //     MAXPTR
   //====================================================
   // Function used to find the maximum value of a generic pointer containing listed values.

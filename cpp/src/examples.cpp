@@ -86,6 +86,9 @@ void utils()
    {
     if( element == 2 ) std::cout << agr::one( element ) << "." << std::endl << std::endl;
    }
+
+  // multi
+  std::cout << "Repeating \"this\" for 3 times_ " << agr::multi( "this", 3 ) << std::endl << std::endl;
  }
 
 //====================================================
