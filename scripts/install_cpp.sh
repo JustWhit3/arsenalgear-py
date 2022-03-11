@@ -24,7 +24,7 @@ rm -rf exprtk-*
 echo ""
 read -p "Do you want to install optional arsenalgear prerequisites (y/n)? " word_o
 if [ $word_o == "y" ] || [ $word_o == "Y" ] ; then
-    sudo apt install doctest-dev subversion valgrind cppcheck clang-format
+    sudo apt install doctest-dev valgrind cppcheck clang-format
 fi
 echo ""
 
