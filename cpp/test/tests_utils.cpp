@@ -45,10 +45,10 @@ TEST_CASE_TEMPLATE( "Testing the isFLoatingPoint function.", T, double, float, l
 TEST_CASE_TEMPLATE( "Testing the runtime_error_func function.", T, std::string, const char* )
  {
   T var = "this";
-  const std::string test_string = "first" + static_cast <std::string>(" \"") +
-                                  static_cast <std::string>( var ) + 
-                                  static_cast <std::string>( "\" " ) +
-                                  "second" +
+  const std::string test_string = "\033[31mfirst" + static_cast <std::string>(" \"") +
+                                  "\033[1m" + static_cast <std::string>( var ) + 
+                                  "\033[22m" + static_cast <std::string>( "\" " ) +
+                                  "second\033[39m" +
                                   "\n";
                        
   CHECK_THROWS_AS( throw( agr::runtime_error_func( "first", var, "second" ) ), std::runtime_error );

@@ -33,11 +33,15 @@ namespace agr
   template <typename T>
   inline std::runtime_error runtime_error_func( const std::string& beg, T variable, const std::string& end )
    {
-    static std::string error = beg + 
+    static std::string error = "\033[31m" +
+                               beg + 
                                static_cast <std::string>(" \"") + 
+                               "\033[1m" +
                                static_cast <std::string>( variable ) +
+                               "\033[22m" +
                                static_cast <std::string>( "\" " ) + 
-                               end;
+                               end +
+                               "\033[39m";
 
     return std::runtime_error( error ); 
    }
