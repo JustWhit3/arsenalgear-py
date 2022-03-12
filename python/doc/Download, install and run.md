@@ -5,8 +5,6 @@
   * [Download the whole repository](#download-the-whole-repository)
   * [Download the latest release](#download-the-latest-release)
 - [Prerequisites](#prerequisites)
-  * [Mandatory](#mandatory)
-  * [Optional](#optional)
 - [Install](#install)
 - [Update](#update)
 - [Uninstall](#uninstall)
@@ -14,7 +12,7 @@
   * [Use in your device](#use-in-your-device)
   * [Compile the source code example and testing](#compile-the-source-code-example-and-testing)
 - [Other scripts](#other-scripts)
-  * [debug_cpp.sh](#debugsh)
+  * [debug.sh](#debugsh)
 
 ## Download 
 
@@ -67,7 +65,7 @@ cd arsenalgear
 
 ## Prerequisites
 
-All the prerequisites can be installed during the first step of the automatic installation with the installer [script](https://github.com/JustWhit3/arsenalgear/blob/main/scripts/install_cpp.sh).
+All the prerequisites can be automatically obtained during the installation via `pip`.
 
 ### Mandatory
 
@@ -194,11 +192,11 @@ make clean
 
 Other scripts have been provided into the [**scripts**](https://github.com/JustWhit3/arsenalgear/blob/main/scripts) folder. After compiling the source code, they can be run from the repository home directory.
 
-### debug_cpp.sh
+### debug.sh
 
 This script is used to run [Valgrind](https://valgrind.org/) and [Cppcheck](https://github.com/danmar/cppcheck) debugging tools on the whole code.
 
 You can run Valgrind debugging tools with a specific executable:
 ```shell
-./scripts/debug_cpp.sh [valgrind-tool-name] [executable-name]
+./scripts/debug.sh [valgrind-tool-name] [executable-name]
 ```
