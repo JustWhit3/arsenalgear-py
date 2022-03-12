@@ -120,6 +120,12 @@ python setup.py bdist_wheel
 pip install dist/arsenalgear-1.0.0-py3-none-any.whl
 ```
 
+To run examples:
+
+```python
+python examples.py
+```
+
 ## Use in your device
 
 Once you have installed the library you can freely use it in one of your Python projects by including one or more of the modules:
