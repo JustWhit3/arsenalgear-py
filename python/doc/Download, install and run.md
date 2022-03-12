@@ -8,11 +8,8 @@
 - [Install](#install)
 - [Update](#update)
 - [Uninstall](#uninstall)
-- [Compile and run](#compile-and-run)
-  * [Use in your device](#use-in-your-device)
-  * [Compile the source code example and testing](#compile-the-source-code-example-and-testing)
-- [Other scripts](#other-scripts)
-  * [debug.sh](#debugsh)
+- [Use in your device](#use-in-your-device)
+- [Run tests](#run-tests)
 
 ## Download 
 
@@ -65,138 +62,97 @@ cd arsenalgear
 
 ## Prerequisites
 
-All the prerequisites can be automatically obtained during the installation via `pip`.
+All the mandatory prerequisites can be automatically obtained during the installation via `pip`.
 
 ### Mandatory
 
 Tools:
 
-- C++17 standard.
-- g++ compiler (g++ 9.3.0 has been tested so far) for compilation.
-- [GNU make](https://www.opensourceforu.com/2012/06/gnu-make-in-detail-for-beginners/#:~:text=Installing%20GNU%20Make,install%20build%2Dessential.) for compilation.
+- Python 3.8.10.
 
 Libraries and frameworks:
 
-- [Boost](https://www.boost.org/) library.
-- [ExprTK](http://www.partow.net/programming/exprtk/) library.
+- `matplotlib >= 3.1.2`.
+- `numpy >= 1.17.4`.
+- `scipy == 1.6.2`.
+- `termcolor == 1.1.0`.
 
 ### Optional
 
-Tools:
-
-- [Valgrind](https://valgrind.org/) to run the [debug.sh](#debugsh) script.
-- [Cppcheck](https://github.com/danmar/cppcheck) to run the [debug.sh](#debugsh) script.
-- [Clang formatter](https://stackoverflow.com/questions/20756924/how-can-i-install-clang-format-in-ubuntu#:~:text=16.04%2C%20simply%20do%3A-,sudo%20apt%20install%20clang%2Dformat,-Share) to format the code for pull requests.
 - [wget](https://www.techwalla.com/articles/how-to-install-wget-in-ubuntu) to download extra dependencies repositories.
-- [unzip](https://www.mysoftkey.com/linux/how-to-do-zip-and-unzip-file-in-ubuntu-linux/) to unzip zipped directories during download and installation.
-
-Libraries and frameworks:
-
-- [doctest](https://github.com/onqtam/doctest) for testing.
+- [unzip](https://www.mysoftkey.com/linux/how-to-do-zip-and-unzip-file-in-ubuntu-linux/) to unzip zipped directories during update with the `update.sh` script.
 
 ## Install
 
-An installer script, called [install_cpp.sh](https://github.com/JustWhit3/arsenalgear/blob/main/scripts/install_cpp.sh), has been introduced. This script can be used to properly install the library into your computer, in order to easily use it in your programs.
+To install the module you can simply enter the `python` directory:
 
-Once the source code has been downloaded you can simply run this script. Enter the arsenalgear folder and type this command on the shell:
-```shell
-./scripts/install_cpp.sh
+```python
+cd arsenalgear/python
 ```
-> **NOTE**: scripts have to be run directly from the repository home directory.
 
-A new library *libarsenalgear* will be created into the `/usr/local/lib` folder of your computer and the [*header*](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include) files will be installed into `/usr/local/include`.
+and enter these two commands:
+
+```python
+python setup.py bdist_wheel
+pip install dist/arsenalgear-1.0.0-py3-none-any.whl
+```
+
+> **NOTE**: 1.0.0 is the first version, this may changes if the version update.
 
 ## Update
 
 In case you want to update the source code from the latest improvements of the repository, you can use the updater script, called [update.sh](https://github.com/JustWhit3/osmanip/blob/main/cpp/update.sh).
 
-From the repository folder type this command on the shell:
+From the main repository folder type this command on the shell:
+
 ```shell
 ./scripts/update.sh
 ```
-Then, you can reinstall the repository:
-```shell
-./scripts/install_cpp.sh
-```
+
+Then, you can reinstall the python module.
 
 ## Uninstall
 
-In case you want to uninstall the software from your computer, you can use the uninstaller script, called [uninstall.sh](https://github.com/JustWhit3/arsenalgear/blob/main/uninstall.sh).
+In case you want to uninstall the python module, simply enter the `python` directory and do:
 
-From the repository folder type this command on the shell:
-```shell
-./scripts/uninstall.sh
+```python
+python setup.py bdist_wheel
+pip install dist/arsenalgear-1.0.0-py3-none-any.whl
 ```
 
-## Compile and run
+## Use in your device
 
-### Use in your device
-
-Once you have installed the library you can freely use it in one of your C++ projects by including one or more of the modules:
-```c++
-#include <arsenalgear/module_name.hpp>
+Once you have installed the library you can freely use it in one of your Python projects by including one or more of the modules:
+```python
+from arsenalgear import module_name
 ```
 for example:
-```c++
-#include <arsenalgear/math.hpp>
+```Python
+from arsenalgear import mathematics
 ```
-Now you are able to access al the functions and classes of the manipulator.
+Now you are able to access al the functions and classes of the module.
 
-You can additionally add also a namespace directive if you want:
-```c++
-using namespace agr;
+### Run tests
+
+Tests have been performed using [`doctest`](https://docs.python.org/3/library/doctest.html) which is integrated in Python 8.
+
+To run tests you can simply run one of the module codes:
+
+```Python
+python module_name
 ```
 
-Supposing you are using the library in a program called *program.cpp*, to compile it you have simply to enter this command in the shell:
-```shell
-g++ program.cpp -larsenalgear
-```
-and then you can run the code with:
-```shell
-./a.out
-```
-> **NOTE**: at least c++17 standard is required to successfully access al the library features.
+for example:
 
-### Compile the source code example and testing
-
-The source code contains also an example code [*cpp/src/examples.cpp*](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/src/examples.cpp) to show the user a simple usage of all the features supported by the library and test codes in the [**test**](https://github.com/JustWhit3/osmanip/blob/main/cpp/test) folder to test the correct functionality of the library functions and methods.
-
-To compile them I prepared a [Makefile](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/Makefile). The source code is already compiled when you install the library, but in case you don't want to install the package and explore only the library features through this examples, you can run this command on the shell:
-```shell
-make
+```Python
+python mathematics.py
 ```
-This will compile both main and test codes. An extra **obj** folder with object files and a **bin** folder with two executables, *main* and *tests*, are now created.
->**NOTE**: compilation may be slow due to the expensive operation of the `parsed_f` function, which uses the ExprTK library.
 
-You have simply to run the former in order to run the entire example code:
-```shell
-./bin/examples
-```
-or the latter in order to test the correct functionalities of the library classes methods and functions:
-```shell
-./bin/tests
-```
-If you want to compile only the main code you can simply enter:
-```shell
-make examples
-```
-if instead you want to compile only the tests code you can use the following command:
-```shell
-make tests
-```
-There is also an option to go back to the pre-compilation state of the code, to do this simply type this command:
-```shell
-make clean
-```
-## Other scripts
+and if the tests run correctly anything is output, otherwise and error message is displayed.
 
-Other scripts have been provided into the [**scripts**](https://github.com/JustWhit3/arsenalgear/blob/main/scripts) folder. After compiling the source code, they can be run from the repository home directory.
+If you want a detailed tests log printed on the screen, simply enter:
 
-### debug.sh
-
-This script is used to run [Valgrind](https://valgrind.org/) and [Cppcheck](https://github.com/danmar/cppcheck) debugging tools on the whole code.
-
-You can run Valgrind debugging tools with a specific executable:
-```shell
-./scripts/debug.sh [valgrind-tool-name] [executable-name]
+```Python
+python src/utils.py -v
+python src/functions.py -v
 ```

@@ -2,201 +2,86 @@
 
 ## Table of contents
 
-- [Namespaces](#namespaces)
-  - [Arg](#arg)
-- [Constants](#constants)
-  - [null_str](#nullstr)
-  - [empty_space](#emptyspace)
-- [Math](#math)
-  - [roundoff](#roundoff)
-  - [isInBounds](#isinbounds)
-  - [parsed_f](#parsed_f)
-- [Operators](operators)
-  - [std::string * int (and vice-versa)](#std--string---int--and-vice-versa-)
-- [Stream](#stream)
-  - [null_stream](#nullstream)
-- [Utils](#utils)
-  - [maxptr](#maxptr)
-  - [runtime_error_func](#runtimeerrorfunc)
-  - [isFloatingPoint](#isFloatingPoint)
-  - [one](#one)
-
-## Namespaces
-
-### agr
-
-It is a global namespace which contains all the code of the library.
-
-## Constants
-
-### null_str
-
-Header file and source code: [constants.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/constants.hpp)
-
-Namespace: `agr`
-
-Complete definition: `template <typename T> inline const T null_str = ""`
-
-Usage: it is used to define the empty string generalizing its type to `std::string` or `const char*` regarding to the context.
-
-Example usage: `agr::null_str<std::string>`
-
-### Empty space
-
-Header file and source code: [constants.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/constants.hpp)
-
-Namespace: `agr`
-
-Complete definition: `template <typename T> inline const T empty_space = " "`
-
-Usage: it is used to define the empty string space with different type (`std::string` or `const char*`) regarding to the context.
-
-Example usage: `agr::empty_space<std::string>`
+- [mathematics](#mathematics)
+  - [Hermite, Chebyshev, Legendre and Laguerre](#hermite-chebyshev-legendre-and-laguerre)
+  - [IsInBounds](#isinbounds)
+  - [e_parser](#e_parser)
+  - [kronecker](#kronecker)
+- [machinelearning](#machinelearning)
+  - [AMS_score](#amsscore)
+  - [plot_AMS](#plotams)
+- [plotter](#plotter)
+  - [plotter_complex](#plotter_complex)
 
 ## Math
 
-### roundoff
+### Hermite, Chebyshev, Legendre and Laguerre
 
-Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
 
-Namespace: `agr`
+Complete definition: `Hermite( x, n )`, `Chebyshev( x, n )`, `Legendre( x, n )` and `Laguerre( x, n )`.
 
-Complete definition: `template <typename T> inline T roundoff( const T& value, const unsigned char prec )`
+Usage: it is used to return orthogonal polynomials functions.
+> **NOTE**: `numpy` returns only the polynomials coefficients, not functions.
 
-Usage: it is used to round the value of a floating point at the `prec` decimal point after comma.
-
-Example usage: `agr::roundoff( 123.4, 2 )`
+Example usage: `Laguerre( 0.5, 3 )`
 
 ### isInBounds
 
-Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
 
-Namespace: `agr`
+Complete definition: `IsInBounds( value, min_, max_ )`
 
-Complete definition: `template <typename T> inline bool IsInBounds( const T& value, const T& low, const T& high )`
+Usage: it is used to check if a value is the bound [`min_`,`max_`].
 
-Usage: it is used to check if a value is the bound [`low`,`high`].
+Example usage: `IsInBounds( 3.2, 1.0, 5.3 )`
 
-Example usage: `agr::isInBounds( 3.2, 1.0, 5.3 )`
+### e_parser
 
-### parsed_f
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
 
-Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+Complete definition: `e_parser( real_part, imaginary_part, n, x )`
 
-Namespace: `agr`
+Usage: returns the complex value of a parsed expression.
 
-Complete definition: `template <typename T> inline double parsed_f( const T_str& expr, double x, double y )`
+Example usage: `e_parser( "n*np.cos( x )", "3*n", 2, np.pi )`
 
-Usage: it is used to parse a string containing a two-variables function signature into a real cpp function in two points.
->**NOTE**: the signature will be changed in order to extend the function to an n-variables function parser.
+### kronecker
 
-Example usage: `agr::parsed_f( "cos(x)+sin(y)", M_PI, M_PI/4 )`
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
 
-## Operators
+Complete definition: `kronecker( i, j )`
 
-### std::string types * int (and vice-versa)
+Usage: returns the kronecker delta value.
 
-Header file: [operators.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+Example usage: `kronecker( 2, 2 )`
 
-Source code: [operators.cpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/src/math.cpp)
+### AMS_score
 
-Namespace: `agr`
+Module: [machinelearning.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/machinelearning.py)
 
-Complete definition (1-st overload): `template <typename T> extern std::string operator *( const T& generic_string, unsigned int integer )`
-Complete definition (2-nd overload): `template <typename T> extern std::string operator *( unsigned int integer, const T& generic_string )`
+Complete definition: `AMS_score( x_cut, predictions, label_vectors, weights )`
 
-Usage: it is used to allow multiplications of a string-type object by an integer.
+Usage: function used to compute the AMS score.
 
-Example usage: 
+Example usage: none
 
-```cpp
-std::string a = "this"; 
-std::cout << a * 5;
-```
+### plot_AMS
 
-## Stream
+Module: [machinelearning.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/machinelearning.py)
 
-### null_stream
+Complete definition: `plot_AMS( predictions, label_vectors, weights )`
 
-Header file: [stream.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
+Usage: function used to plot the AMS function.
 
-Source code: [stream.cpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/src/math.cpp)
+Example usage: see [here](https://github.com/JustWhit3/higgs-decay-classification/blob/master/scripts/python/analysis.py)
 
-Namespace: `agr`
+### plotter_complex
 
-Complete definition (1-st overload): `extern boost::iostreams::stream<boost::iostreams::null_sink> null_stream`
+Module: [plotter.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/plotter.py)
 
-Usage: it is used to define the null-stream.
+Complete definition: `plotter_complex( real_part, imaginary_part, a, b, n, coefficient )`
 
-Example usage: see [here](https://github.com/JustWhit3/osmanip/blob/main/include/manipulators/csmanip.hpp)
+Usage: function used to plot a complex function.
 
-## Utils
-
-### maxptr
-
-Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `template <typename T> inline T maxptr ( T *ptr, int a )`
-
-Usage: function used to find the maximum value of a pointer of dimension `a`
-
-Example usage: `agr::maxptr( pointer, pointer_dimension )`
-
-### runtime_error_func
-
-Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `template <typename T_var> inline std::runtime_error runtime_error_func( const std::string& beg, T_var variable, const std::string& end )`
-
-Usage: function used to throw customized runtime error.
-
-Example usage: `throw agr::runtime_error_func( "This variable", var, "is not supported!" )`
-
-### isFloatingPoint
-
-Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `template <typename T> inline bool isFloatingPoint( const T& expression )`
-
-Usage: function used to check if an expression is a floating point (double, float or variations) or not.
-
-Example usage: `agr::isFloatingPoint( 0.000003 )`
-
-### one
-
-Header file and source code: [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `template <typename T> inline T one( const T& iterating_var )`
-
-Usage: function used to find the incremented unit of a loop.
-
-Example usage:
-
-```cpp
-static std::vector <int> v { 1, 2 };
-for( const auto & element: v ) std::cout << agr::one( element );
-```
-
-### multi
-
-Header file : [utils.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
-
-Source code: [utils.cpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.cpp)
-
-Namespace: `agr`
-
-Complete definition (1-st overload): `extern std::string multi( const std::string& element, const int& n_times )`
-
-Usage: function used to return a certain string `element` for `n_times` times.
-
-Example usage:
-
-`agr::multi( "repeat", 5 )`
+Example usage: see [here](https://github.com/JustWhit3/WaveNCC)

@@ -116,7 +116,7 @@ From the repository folder type this command on the shell:
 ```shell
 ./scripts/update.sh
 ```
-Then, you can reinstall the repository:
+Then, you can reinstall the cpp source code:
 ```shell
 ./scripts/install_cpp.sh
 ```
@@ -142,7 +142,7 @@ for example:
 ```c++
 #include <arsenalgear/math.hpp>
 ```
-Now you are able to access al the functions and classes of the manipulator.
+Now you are able to access al the functions and classes of the library.
 
 You can additionally add also a namespace directive if you want:
 ```c++

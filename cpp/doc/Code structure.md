@@ -11,7 +11,7 @@
   - [roundoff](#roundoff)
   - [isInBounds](#isinbounds)
   - [parsed_f](#parsed_f)
-- [Operators](operators)
+- [Operators](#operators)
   - [std::string * int (and vice-versa)](#std--string---int--and-vice-versa-)
 - [Stream](#stream)
   - [null_stream](#nullstream)
@@ -67,7 +67,7 @@ Usage: it is used to round the value of a floating point at the `prec` decimal p
 
 Example usage: `agr::roundoff( 123.4, 2 )`
 
-### isInBounds
+### IsInBounds
 
 Header file and source code: [math.hpp](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/include/math.hpp)
 
@@ -77,7 +77,7 @@ Complete definition: `template <typename T> inline bool IsInBounds( const T& val
 
 Usage: it is used to check if a value is the bound [`low`,`high`].
 
-Example usage: `agr::isInBounds( 3.2, 1.0, 5.3 )`
+Example usage: `agr::IsInBounds( 3.2, 1.0, 5.3 )`
 
 ### parsed_f
 
