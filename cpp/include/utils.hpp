@@ -7,6 +7,8 @@
 #include <type_traits>
 #include <vector>
 
+using namespace std::string_literals;
+
 namespace agr
  {
   //====================================================
@@ -34,12 +36,10 @@ namespace agr
   inline std::runtime_error runtime_error_func( const std::string& beg, T variable, const std::string& end )
    {
     static std::string error = "\033[31m" +
-                               beg + 
-                               static_cast <std::string>(" \"") + 
+                               beg + " \""s + 
                                "\033[1m" +
                                static_cast <std::string>( variable ) +
-                               "\033[22m" +
-                               static_cast <std::string>( "\" " ) + 
+                               "\033[22m" + "\" "s + 
                                end +
                                "\033[39m";
 

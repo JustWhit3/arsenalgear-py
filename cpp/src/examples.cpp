@@ -15,22 +15,22 @@
 //====================================================
 void math()
  {
-  std::cout << std::endl << "======================================================" << std::endl
-                         << "     MATH                                             " << std::endl
-                         << "======================================================" << std::endl
-                         << std::endl;
+  std::cout << "\n" << "======================================================" << "\n"
+                    << "     MATH                                             " << "\n"
+                    << "======================================================" << "\n"
+                    << "\n";
 
   // Roundoff
   std::cout << "Round " << 3.546 << " until 2-nd precision digits after comma: " 
-            << agr::roundoff( 3.546, 2 ) << "." << std::endl << std::endl;
+            << agr::roundoff( 3.546, 2 ) << "." << "\n\n";
 
   // isInBounds
   std::cout << "Check if 3 is between 2 and 4: " << agr::IsInBounds( 3, 2, 4 ) << " (True)." 
-            << std::endl << std::endl;
+            << "\n\n";
 
   // parsed_f
   std::cout << "Parsing cos(x) + sin(y) for x=pi/2 and y=pi/4: " << agr::parsed_f( "cos(x)+sin(y)", M_PI/2, M_PI/4 ) 
-            << "." << std::endl;
+            << "." << "\n";
  }
 
 //====================================================
@@ -38,15 +38,15 @@ void math()
 //====================================================
 void operators()
  {
-  std::cout << std::endl << "======================================================" << std::endl
-                         << "     OPERATORS                                        " << std::endl
-                         << "======================================================" << std::endl
-                         << std::endl;
+  std::cout << "\n" << "======================================================" << "\n"
+                    << "     OPERATORS                                        " << "\n"
+                    << "======================================================" << "\n"
+                    << "\n";
 
   // * strings by an integer:
   std::string a = "a";
   std::cout << "Multiplying \"a\" for 5 times: " << a * 5 << agr::empty_space<std::string_view> * 5
-            << "adding spaces." << std::endl;
+            << "adding spaces." << "\n";
  }
 
 //====================================================
@@ -54,10 +54,10 @@ void operators()
 //====================================================
 void utils()
  {
-  std::cout << std::endl << "======================================================" << std::endl
-                         << "     UTILS                                            " << std::endl
-                         << "======================================================" << std::endl
-                         << std::endl;
+  std::cout << "\n" << "======================================================" << "\n"
+                    << "     UTILS                                            " << "\n"
+                    << "======================================================" << "\n"
+                    << "\n";
 
   // maxptr
   int *ptr = new int[5];
@@ -67,7 +67,7 @@ void utils()
     ptr[i] = i;
     std::cout << ptr[i] << agr::empty_space<std::string>;
    }
-  std::cout << "} -> " << agr::maxptr( ptr, 5 ) << "." << std::endl << std::endl;
+  std::cout << "} -> " << agr::maxptr( ptr, 5 ) << "." << "\n\n";
 
   // runtime_error_func
   // commented since it quit the program. Uncomment to try it:
@@ -76,7 +76,7 @@ void utils()
 
   // isFLoatingPoint
   std::cout << "Check if 0.00034 is a floating point: " << agr::isFloatingPoint( 0.00034 ) 
-            << " (True)." << std::endl << std::endl;
+            << " (True)." << "\n\n";
 
   // one
   std::cout << "Check incremented value of for( const auto & element: v ) with v vector of dim = 2: ";
@@ -84,11 +84,11 @@ void utils()
 
   for( const auto & element: v )
    {
-    if( element == 2 ) std::cout << agr::one( element ) << "." << std::endl << std::endl;
+    if( element == 2 ) std::cout << agr::one( element ) << "." << "\n\n";
    }
 
   // multi
-  std::cout << "Repeating \"this\" for 3 times_ " << agr::multi( "this", 3 ) << std::endl << std::endl;
+  std::cout << "Repeating \"this\" for 3 times_ " << agr::multi( "this", 3 ) << "\n\n";
  }
 
 //====================================================
@@ -96,11 +96,11 @@ void utils()
 //====================================================
 void stream()
  {
-  /*std::cout << std::endl << "======================================================" << std::endl
-                         << "     STREAM                                           " << std::endl
-                         << "======================================================" << std::endl
-                         << std::endl;*/
+  /*std::cout << "\n" << "======================================================" << "\n"
+                      << "     STREAM                                           " << "\n"
+                      << "======================================================" << "\n"
 
+                      << "\n";*/  
   //Nothing for the moment.
  }
 

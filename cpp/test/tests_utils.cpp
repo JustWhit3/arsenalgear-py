@@ -12,6 +12,8 @@
 #include <string>
 #include <vector>
 
+using namespace std::string_literals;
+
 //====================================================
 //     MAXPTR
 //====================================================
@@ -45,9 +47,9 @@ TEST_CASE_TEMPLATE( "Testing the isFLoatingPoint function.", T, double, float, l
 TEST_CASE_TEMPLATE( "Testing the runtime_error_func function.", T, std::string, const char* )
  {
   T var = "this";
-  const std::string test_string = "\033[31mfirst" + static_cast <std::string>(" \"") +
+  const std::string test_string = "\033[31mfirst" + " \""s +
                                   "\033[1m" + static_cast <std::string>( var ) + 
-                                  "\033[22m" + static_cast <std::string>( "\" " ) +
+                                  "\033[22m" + "\" "s +
                                   "second\033[39m" +
                                   "\n";
                        
