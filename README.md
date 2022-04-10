@@ -87,6 +87,7 @@ arsenalgear/
 │   ├── uninstall_cpp.sh
 │   ├── debug.sh
 │   ├── update.sh
+│   ├── size_of_dir.py
 ├── img/
 ├── README.md
 ├── LICENSE
