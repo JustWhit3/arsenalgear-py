@@ -9,6 +9,7 @@ Author: Gianluca Bianco
 #################################################
 import numpy as np
 import matplotlib.pyplot as plt
+import doctest
 
 #################################################
 #     "AMS_score" function
@@ -58,3 +59,45 @@ def plot_AMS( predictions, label_vectors, weights ):
     plt.grid()
     
     print( "The best AMS Score is {:.3f} at a Cut Parameter of {:.2f}".format( max( y ), x[ np.argmax( y ) ] ) )
+    
+#############################################################
+#    RemoveOutliers
+#############################################################
+def RemoveOutliers( array, max_deviations ):
+    """
+    Function used to remove outliers from an array.
+
+    Args:
+        array (numpy.array): the interested array.
+        max_deviations (int): the maximum number of std.
+
+    Returns:
+        numpy.array: the array without outliers.
+        
+    Testing:
+        >>> RemoveOutliers( np.array([1, 1, 1, 1, 1, 1, 42, 1, 1]), 2 )
+        array([1, 1, 1, 1, 1, 1, 1, 1])
+        >>> RemoveOutliers( np.array([20220314062656, 20220314092546, 20220314092736, 20220314092928, 20220314093120, 20220314092407, 20220314092642, 20220314092831, 20220314093026, 20220314094935]), 2 )
+        array([20220314092546, 20220314092736, 20220314092928, 20220314093120,
+               20220314092407, 20220314092642, 20220314092831, 20220314093026,
+               20220314094935])
+        >>> RemoveOutliers( np.array([20220314085233, 20220314092407, 20220314092547, 20220314092643, 20220314092738, 20220314092832, 20220314092930, 20220314093026, 20220314093121, 20220314094315]), 2 )
+        array([20220314092407, 20220314092547, 20220314092643, 20220314092738,
+               20220314092832, 20220314092930, 20220314093026, 20220314093121,
+               20220314094315])
+        >>> RemoveOutliers( np.array([20220314063832, 20220314092412, 20220314092551, 20220314092647, 20220314092741, 20220314092836, 20220314092933, 20220314093031, 20220314093125, 20220314102110]), 1 )
+        array([20220314092412, 20220314092551, 20220314092647, 20220314092741,
+               20220314092836, 20220314092933, 20220314093031, 20220314093125])
+    """
+    
+    mean = np.mean( array )
+    std_dev = np.std( array )
+    zero_based = abs( array - mean ) # Normalize array around 0
+    
+    return array[ zero_based < max_deviations * std_dev ]
+
+#################################################
+#     Doing tests
+#################################################
+if __name__ == "__main__":
+    doctest.testmod()

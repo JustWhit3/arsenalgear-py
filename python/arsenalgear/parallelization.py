@@ -9,6 +9,7 @@ Author: Gianluca Bianco
 #################################################
 import multiprocessing as multi
 import numpy as np
+import doctest
 
 #################################################
 #     MultiProcesses
@@ -33,3 +34,9 @@ def MultiProcesses( *functions ):
     # Joining processes
     for process in processes:
       process.join()
+      
+#################################################
+#     Doing tests
+#################################################
+if __name__ == "__main__":
+    doctest.testmod()

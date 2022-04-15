@@ -7,7 +7,7 @@
   - [IsInBounds](#isinbounds)
   - [e_parser](#e_parser)
   - [kronecker](#kronecker)
-- [machinelearning](#machinelearning)
+- [datascience](#datascience)
   - [AMS_score](#amsscore)
   - [plot_AMS](#plotams)
 - [plotter](#plotter)
@@ -58,7 +58,7 @@ Example usage: `kronecker( 2, 2 )`
 
 ### AMS_score
 
-Module: [machinelearning.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/machinelearning.py)
+Module: [datascience.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/datascience.py)
 
 Complete definition: `AMS_score( x_cut, predictions, label_vectors, weights )`
 
@@ -68,7 +68,7 @@ Example usage: none
 
 ### plot_AMS
 
-Module: [machinelearning.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/machinelearning.py)
+Module: [datascience.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/datascience.py)
 
 Complete definition: `plot_AMS( predictions, label_vectors, weights )`
 
@@ -90,8 +90,38 @@ Example usage: see [here](https://github.com/JustWhit3/WaveNCC)
 
 Module: [parallelization.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/parallelization.py)
 
-Complete definition: `MultiProcesses( *functions ):`
+Complete definition: `MultiProcesses( *functions )`
 
 Usage: function used to sent more processes in parallel.
 
 Example usage: `MultiProcesses( process_1, process_2 )`
+
+### TimeToInt
+
+Module: [utils.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/utils.py)
+
+Complete definition: `TimeToInt( time_string )`
+
+Function used to convert a time-string into an integer.
+
+Example usage: `TimeToInt( "2022.03.14 09:20:00.000" )`
+
+### IntToTime
+
+Module: [utils.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/utils.py)
+
+Complete definition: `IntToTime( time_int )`
+
+Function used to convert an integer into a time-string.
+
+Example usage: `IntToTime( 20220314092000 )`
+
+### RemoveOutliers
+
+Module: [statistics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/statistics.py)
+
+Complete definition: `RemoveOutliers( array, max_deviations )`
+
+Function used to remove outliers from an array.
+
+Example usage: `RemoveOutliers( np.array([1, 1, 1, 1, 1, 1, 42, 1, 1]), 2 )`

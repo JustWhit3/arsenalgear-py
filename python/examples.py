@@ -10,7 +10,7 @@ import numpy as np
 # Arsenalgear libraries
 sys.path.append("arsenalgear/")
 from arsenalgear import mathematics as mt
-from arsenalgear import machinelearning as ml
+from arsenalgear import datascience as ds
 from arsenalgear import plotter as pt
 from arsenalgear import parallelization as paral
 
@@ -35,14 +35,17 @@ def mathematics():
     print()
 
 #====================================================
-#     Machine learning
+#     Data Science
 #====================================================
-def machinelearning():
+def datascience():
     print( "#################################################" )
-    print( "#     Machine Learning                           " )
+    print( "#     Data Science                               " )
     print( "#################################################" )
     print()
     print( "Not easy to produce AMS score or plots, see repository JustWhit3/higgs-decay-classification for an example." )
+    print()
+    array = np.array([1, 1, 1, 1, 1, 1, 42, 1, 1])
+    print( "Removing outliers from array {}: {}".format( array, ds.RemoveOutliers( array, 2 ) ) )
     print()
 
 #====================================================
@@ -80,7 +83,7 @@ def parallelization():
 #====================================================
 def main():
     mathematics()
-    machinelearning()
+    datascience()
     plotter()
     parallelization()
         
