@@ -113,7 +113,7 @@ Documentation for the [python](https://github.com/JustWhit3/arsenalgear/tree/mai
 
 ## News from the last release
 
-Nothing for the moment, since this is the first beta release.
+Nothing for the moment, since this is the first official release.
 
 ## List of features
 

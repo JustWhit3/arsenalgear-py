@@ -85,3 +85,13 @@ Complete definition: `plotter_complex( real_part, imaginary_part, a, b, n, coeff
 Usage: function used to plot a complex function.
 
 Example usage: see [here](https://github.com/JustWhit3/WaveNCC)
+
+### MultiProcesses
+
+Module: [parallelization.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/parallelization.py)
+
+Complete definition: `MultiProcesses( *functions ):`
+
+Usage: function used to sent more processes in parallel.
+
+Example usage: `MultiProcesses( process_1, process_2 )`

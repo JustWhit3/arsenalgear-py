@@ -15,7 +15,7 @@ from setuptools import find_packages, setup
 setup(
     name = "arsenalgear",
     packages = find_packages( include = [ "arsenalgear" ] ),
-    version = "1.0.0",
+    version = "1.0.1",
     description = "A library containing general purpose utils I developed for other projects, using different languages",
     author = "Gianluca Bianco",
     license = "MIT",

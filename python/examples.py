@@ -2,13 +2,17 @@
 #====================================================
 #     MODULES
 #====================================================
+
+# Standard libraries
 import sys
 import numpy as np
+
+# Arsenalgear libraries
 sys.path.append("arsenalgear/")
 from arsenalgear import mathematics as mt
 from arsenalgear import machinelearning as ml
 from arsenalgear import plotter as pt
-
+from arsenalgear import parallelization as paral
 
 #====================================================
 #     Mathematics
@@ -52,6 +56,24 @@ def plotter():
     print( "Plotting cos(x) + i + sin(x): " )
     pt.plotter_complex( "np.cos(x)", "np.sin(x)", 0, np.pi, 0, 1 )
     print()
+    
+#====================================================
+#     Parallelization
+#====================================================
+def process_1():
+    print( "First process!" )
+    
+def process_2():
+    print( "Second process" )
+    
+def parallelization():
+    print( "#################################################" )
+    print( "#     Parallelization                            " )
+    print( "#################################################" )
+    print()
+    print( "Parallelizing two processes: " )
+    paral.MultiProcesses( process_1, process_2 )
+    print()
 
 #====================================================
 #     Main
@@ -60,6 +82,7 @@ def main():
     mathematics()
     machinelearning()
     plotter()
+    parallelization()
         
 if __name__ == "__main__":
     main()

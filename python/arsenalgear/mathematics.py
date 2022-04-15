@@ -18,10 +18,12 @@ import numpy as np
 def Hermite( x, n ):
     """
     Function used to compute the Hermite polynomials.
+    
     Args:
         x (any): variable.
         n (int): polynomials order
     Returns:
+    
         any: returns the value of the polynomials at a given order for a given variable value.
         
     Testing:
@@ -38,9 +40,11 @@ def Hermite( x, n ):
 def Chebyshev( x, n ):
     """
     Function used to compute the Chebyshev polynomials.
+    
     Args:
         x (any): variable.
         n (int): polynomials order
+        
     Returns:
         any: returns the value of the polynomials at a given order for a given variable value.
         
@@ -58,9 +62,11 @@ def Chebyshev( x, n ):
 def Legendre( x, n ): 
     """
     Function used to compute the Legendre polynomials.
+    
     Args:
         x (any): variable.
         n (int): polynomials order
+        
     Returns:
         any: returns the value of the polynomials at a given order for a given variable value.
         
@@ -101,10 +107,12 @@ def Laguerre( x, n ):
 def IsInBounds( value, min_, max_ ):
     """
     Function to check if a value is in certain bounds.
+    
     Args:
         value (any): the interested value.
         min (any): min value.
         max (any): max value.
+        
     Returns:
         bool: return true if is in the bound, otherwise false.
         
@@ -127,11 +135,13 @@ def IsInBounds( value, min_, max_ ):
 def e_parser( real_part, imaginary_part, n, x ):
     """
     Returns the complex value of a parsed expression.
+    
     Args:
         real_part (string): mathematical real expression part.
         imaginary_part (string): mathematical imaginary expression part.
         n (int): wave function index.
         x (any): expression variable.
+        
     Returns:
         complex: returns the value of a complex parsed expression for an index n and variable x.
         
@@ -168,9 +178,11 @@ def e_parser( real_part, imaginary_part, n, x ):
 def kronecker( i, j ):
     """
     Definition of the Kronecker delta function for two numbers i and j.
+    
     Args:
         i (int): index i
         j (int): index j
+        
     Returns:
         int: return the Kronecker delta value.
         
