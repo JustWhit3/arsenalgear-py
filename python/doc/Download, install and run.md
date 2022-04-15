@@ -84,20 +84,11 @@ Libraries and frameworks:
 
 ## Install
 
-To install the module you can simply enter the `python` directory:
+To install the module you can simply do it through `pip`, since it is present in the official Python package manager ([here](https://pypi.org/project/arsenalgear/)):
 
-```python
-cd arsenalgear/python
+```bash
+pip install arsenalgear
 ```
-
-and enter these two commands:
-
-```python
-python setup.py bdist_wheel
-pip install dist/arsenalgear-1.0.0-py3-none-any.whl
-```
-
-> **NOTE**: 1.0.0 is the first version, this may changes if the version update.
 
 ## Update
 
@@ -117,8 +108,9 @@ In case you want to uninstall the python module, simply enter the `python` direc
 
 ```python
 python setup.py bdist_wheel
-pip install dist/arsenalgear-1.0.0-py3-none-any.whl
+pip install dist/arsenalgear-X.X.X-py3-none-any.whl
 ```
+> **NOTE**: `X.X.X` should be replaced with the version you are installing.
 
 To run examples:
 
