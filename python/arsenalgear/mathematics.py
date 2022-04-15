@@ -125,9 +125,7 @@ def IsInBounds( value, min_, max_ ):
         False
     """
     
-    if min_ < value < max_:
-        return True
-    return False
+    return min_ <= value <= max_
 
 #################################################
 #     "expression_parser" function
