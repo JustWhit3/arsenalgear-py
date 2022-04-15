@@ -113,7 +113,10 @@ Documentation for the [python](https://github.com/JustWhit3/arsenalgear/tree/mai
 
 ## News from the last release
 
-Nothing for the moment, since this is the first official release.
+- Python package version has been added to PyPi.
+- Module datascience has been provided.
+- Module utils has been provided.
+- Module parallelization has been provided.
 
 ## List of features
 
