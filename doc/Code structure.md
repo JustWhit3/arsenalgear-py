@@ -17,7 +17,7 @@
 
 ### Hermite, Chebyshev, Legendre and Laguerre
 
-Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/mathematics.py)
 
 Complete definition: `Hermite( x, n )`, `Chebyshev( x, n )`, `Legendre( x, n )` and `Laguerre( x, n )`.
 
@@ -28,7 +28,7 @@ Example usage: `Laguerre( 0.5, 3 )`
 
 ### isInBounds
 
-Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/mathematics.py)
 
 Complete definition: `IsInBounds( value, min_, max_ )`
 
@@ -38,7 +38,7 @@ Example usage: `IsInBounds( 3.2, 1.0, 5.3 )`
 
 ### e_parser
 
-Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/mathematics.py)
 
 Complete definition: `e_parser( real_part, imaginary_part, n, x )`
 
@@ -48,7 +48,7 @@ Example usage: `e_parser( "n*np.cos( x )", "3*n", 2, np.pi )`
 
 ### kronecker
 
-Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/mathematics.py)
+Module: [mathematics.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/mathematics.py)
 
 Complete definition: `kronecker( i, j )`
 
@@ -58,7 +58,7 @@ Example usage: `kronecker( 2, 2 )`
 
 ### AMS_score
 
-Module: [datascience.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/datascience.py)
+Module: [datascience.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/datascience.py)
 
 Complete definition: `AMS_score( x_cut, predictions, label_vectors, weights )`
 
@@ -68,7 +68,7 @@ Example usage: none
 
 ### plot_AMS
 
-Module: [datascience.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/datascience.py)
+Module: [datascience.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/datascience.py)
 
 Complete definition: `plot_AMS( predictions, label_vectors, weights )`
 
@@ -78,7 +78,7 @@ Example usage: see [here](https://github.com/JustWhit3/higgs-decay-classificatio
 
 ### plotter_complex
 
-Module: [plotter.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/plotter.py)
+Module: [plotter.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/plotter.py)
 
 Complete definition: `plotter_complex( real_part, imaginary_part, a, b, n, coefficient )`
 
@@ -88,7 +88,7 @@ Example usage: see [here](https://github.com/JustWhit3/WaveNCC)
 
 ### MultiProcesses
 
-Module: [parallelization.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/parallelization.py)
+Module: [parallelization.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/parallelization.py)
 
 Complete definition: `MultiProcesses( *functions )`
 
@@ -98,7 +98,7 @@ Example usage: `MultiProcesses( process_1, process_2 )`
 
 ### TimeToInt
 
-Module: [utils.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/utils.py)
+Module: [utils.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/utils.py)
 
 Complete definition: `TimeToInt( time_string )`
 
@@ -108,7 +108,7 @@ Example usage: `TimeToInt( "2022.03.14 09:20:00.000" )`
 
 ### IntToTime
 
-Module: [utils.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/utils.py)
+Module: [utils.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/utils.py)
 
 Complete definition: `IntToTime( time_int )`
 
@@ -118,7 +118,7 @@ Example usage: `IntToTime( 20220314092000 )`
 
 ### RemoveOutliers
 
-Module: [statistics.py](https://github.com/JustWhit3/arsenalgear/blob/main/python/arsenalgear/statistics.py)
+Module: [statistics.py](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear/statistics.py)
 
 Complete definition: `RemoveOutliers( array, max_deviations )`
 

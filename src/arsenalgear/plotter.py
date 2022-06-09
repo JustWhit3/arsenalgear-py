@@ -1,3 +1,4 @@
+#!/bin/python3
 # -*- coding: utf-8 -*-
 """
 Created on Sat Mar 12 12:18:00 2022
@@ -8,7 +9,7 @@ Author: Gianluca Bianco
 #     Libraries
 #################################################
 from termcolor import colored
-import mathematics as mt
+from mathematics import e_parser
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.interpolate as sci
@@ -42,7 +43,7 @@ def plotter_complex( real_part, imaginary_part, a, b, n, coefficient ):
             x = np.arange( 10*a, 10*b, ( ( 10*( b-a ) ) / 10 ) )
 
         def func( x ):
-            return coefficient * mt.e_parser( real_part, imaginary_part, n, x )
+            return coefficient * e_parser( real_part, imaginary_part, n, x )
         
         my_label = "Normalized wave-function f(x) for n = " + str( n )
         plt.figure( figsize = ( 8, 6 ), dpi = 80 )

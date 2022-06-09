@@ -1,39 +1,45 @@
 # Download and install
 
 ## Table of contents
+
 - [Download](#download)
-  * [Download the whole repository](#download-the-whole-repository)
-  * [Download the latest release](#download-the-latest-release)
+  - [Download the whole repository](#download-the-whole-repository)
+  - [Download the latest release](#download-the-latest-release)
 - [Prerequisites](#prerequisites)
+  - [Mandatory](#mandatory)
+  - [Optional](#optional)
 - [Install](#install)
-- [Update](#update)
-- [Uninstall](#uninstall)
 - [Use in your device](#use-in-your-device)
 - [Run tests](#run-tests)
 
-## Download 
+## Download
 
 To download the library you can proceed in two independent ways.
 
 ### Download the whole repository
 
-First of all, you need to download the code: go to the [main page](https://github.com/JustWhit3/arsenalgear) of the repository and click on the upper right green button called `Code`. Than click on `Download ZIP` and wait the download to be completed.
+First of all, you need to download the code: go to the [main page](https://github.com/JustWhit3/arsenalgear-py) of the repository and click on the upper right green button called `Code`. Than click on `Download ZIP` and wait the download to be completed.
 
 Then open a fresh shell and move the downloaded zipped file to your home directory (or to any other place you prefer):
+
 ```shell
-mv Downloads/arsenalgear-main.zip $HOME
+mv Downloads/arsenalgear-py-main.zip $HOME
 ```
+
 Where ``Downloads`` have to be replaced with the right name (and maybe the right path) of your downloads directory.
 
 Now you have to enter your home folder (unless you were already in it, in this case skip this passage), extract the folder from the zipped file and renaming itself with its right repository name. Therefore lets type this commands one after the other:
+
 ```shell
 cd $HOME
-unzip arsenalgear-main.zip
-mv arsenalgear-main arsenalgear
+unzip arsenalgear-py-main.zip
+mv arsenalgear-py-main arsenalgear-py
 ```
+
 And that's all. You can enter the folder by simply typing:
+
 ```shell
-cd arsenalgear
+cd arsenalgear-py
 ```
 
 ### Download the latest release
@@ -41,23 +47,27 @@ cd arsenalgear
 Alternatively you can download the latest version of the repository from the ``Releases`` button on the right of the repository main page by clicking on the source code link. In this case the procedure is similar:
 
 Open a fresh shell and move the downloaded zipped file to your home directory (or to any other place you prefer):
+
 ```shell
-mv Downloads/arsenalgear-x.y.z.zip $HOME
+mv Downloads/arsenalgear-py-x.y.z.zip $HOME
 ```
+
 Where `x.y.z` is the release tag and ``Downloads`` have to be replaced with the right name (and maybe the right path) of your downloads directory.
 
 Now you have to enter your home folder (unless you were already in it, in this case skip this passage), extract the folder from the zipped file and renaming itself with its right repository name. Therefore lets type this commands one after the other:
+
 ```shell
 cd $HOME
-unzip arsenalgear-x.y.z.zip
-mv arsenalgear-x.y.z arsenalgear
+unzip arsenalgear-py-x.y.z.zip
+mv arsenalgear-py-x.y.z arsenalgear-py
 ```
 
-> If you prefer to download the tar.gz format of the release you have to run the `gunzip` command followed by the `tar -xvf` command on the zipped release folder and than proceed with `mv`. 
+> If you prefer to download the tar.gz format of the release you have to run the `gunzip` command followed by the `tar -xvf` command on the zipped release folder and than proceed with `mv`.
 
 And that's all. You can enter the folder by simply typing:
+
 ```shell
-cd arsenalgear
+cd arsenalgear-py
 ```
 
 ## Prerequisites
@@ -79,38 +89,15 @@ Libraries and frameworks:
 
 ### Optional
 
-- [wget](https://www.techwalla.com/articles/how-to-install-wget-in-ubuntu) to download extra dependencies repositories.
 - [unzip](https://www.mysoftkey.com/linux/how-to-do-zip-and-unzip-file-in-ubuntu-linux/) to unzip zipped directories during update with the `update.sh` script.
 
 ## Install
 
-To install the module you can simply do it through `pip`, since it is present in the official Python package manager ([here](https://pypi.org/project/arsenalgear/)):
+To install the module you can simply do it through `pip`, since it is present in the official Python package manager ([here](https://pypi.org/project/arsenalgear-py/)):
 
 ```bash
 pip install arsenalgear
 ```
-
-## Update
-
-In case you want to update the source code from the latest improvements of the repository, you can use the updater script, called [update.sh](https://github.com/JustWhit3/osmanip/blob/main/cpp/update.sh).
-
-From the main repository folder type this command on the shell:
-
-```shell
-./scripts/update.sh
-```
-
-Then, you can reinstall the python module.
-
-## Uninstall
-
-In case you want to uninstall the python module, simply enter the `python` directory and do:
-
-```python
-python setup.py bdist_wheel
-pip install dist/arsenalgear-X.X.X-py3-none-any.whl
-```
-> **NOTE**: `X.X.X` should be replaced with the version you are installing.
 
 To run examples:
 
@@ -121,16 +108,20 @@ python examples.py
 ## Use in your device
 
 Once you have installed the library you can freely use it in one of your Python projects by including one or more of the modules:
+
 ```python
 from arsenalgear import module_name
 ```
+
 for example:
+
 ```Python
 from arsenalgear import mathematics
 ```
+
 Now you are able to access al the functions and classes of the module.
 
-### Run tests
+## Run tests
 
 Tests have been performed using [`doctest`](https://docs.python.org/3/library/doctest.html) which is integrated in Python 8.
 

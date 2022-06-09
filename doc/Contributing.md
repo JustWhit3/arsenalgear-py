@@ -10,7 +10,7 @@
 
 Thank you very much for being here! First of all, I want to let you know that contributions are more than welcome and really appreciated.
 
-In case you want to contribute, even with a small bug fix, you will be featured into the credits, in the main [README](https://github.com/JustWhit3/arsenalgear/blob/main/doc/CREDITS.md) file.
+In case you want to contribute, even with a small bug fix, you will be featured into the credits, in the main [README](https://github.com/JustWhit3/arsenalgear-py/blob/main/README.md) file.
 
 ## How to contribute
 
@@ -19,14 +19,8 @@ To add your contribution, please follow these guidelines:
 1) Fork your own copy of the repository.
 2) Work on your changes / improvements in the forked repo.
 3) **Test** if your changes / improvements are correctly implemented and all the other features are not compromised. For this latter requirement, please run the examples and tests executables and check if you find something different from before.
-4) Before submitting the code, reformat it using the [`.clang-format`](https://github.com/JustWhit3/arsenalgear/blob/main/cpp/.clang-format.md) file. Simply do:
-
-```bash
-.clang-format -i /path/to/file
-```
-
-5) Optional, but really appreciated: update the documentatio fo each folder or the main [README](https://github.com/JustWhit3/arsenalgear/blob/main/README.md) with the new features you added.
-6) Finally, make the pull request.
+4) Optional, but really appreciated: update the documentation for each folder or the main [README](https://github.com/JustWhit3/arsenalgear-py/blob/main/README.md) with the new features you added.
+5) Finally, make the pull request.
 
 Once your pull request will be submitted, I will carefully review it and, if it will be considered as an improvement, I will confirm it.
 

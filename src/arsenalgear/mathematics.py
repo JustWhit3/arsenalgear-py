@@ -1,3 +1,4 @@
+#!/bin/python3
 # -*- coding: utf-8 -*-
 """
 Created on Sat Mar 12 12:18:00 2022
@@ -128,7 +129,7 @@ def IsInBounds( value, min_, max_ ):
     return min_ <= value <= max_
 
 #################################################
-#     "expression_parser" function
+#     "e_parser" function
 #################################################
 def e_parser( real_part, imaginary_part, n, x ):
     """

@@ -3,8 +3,8 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Gianluca"
   given-names: "Bianco"
-title: "osmanip"
-version: 1.0.2
+title: "arsenalgear-py"
+version: 1.1.0
 doi: https://zenodo.org/badge/latestdoi/465779737
 date-released: 2021-12-25
-url: "https://github.com/JustWhit3/arsenalgear"
+url: "https://github.com/JustWhit3/arsenalgear-py"
