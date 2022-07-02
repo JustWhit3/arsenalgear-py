@@ -152,7 +152,7 @@ Here you can find the list of features implemented in the current version of the
 
 - [AMS_score](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#a0763a5d9063ba2ad2f02afeb27dbebf1): function used to retrieve the AMS score.
 - [RemoveOutliers](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#a5e0b3384380b048873103f8b29f0af9c): function used to remove the outliers of an array.
-- [RemoveOutliers_DF](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#a5e0b3384380b048873103f8b29f0af9c): function used to remove the outliers of a dataframe.
+- [RemoveOutliers_DF](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#ad8091af135f0399eefd1cf9ff5cb4ff0): function used to remove the outliers of a dataframe.
 
 ### Mathematics
 
