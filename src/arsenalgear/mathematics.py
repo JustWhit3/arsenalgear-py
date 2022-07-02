@@ -12,6 +12,7 @@ import parser
 import doctest
 from termcolor import colored
 import numpy as np
+import math
 
 #################################################
 #     Orthogonal polynomials functions
@@ -196,6 +197,31 @@ def kronecker( i, j ):
         return 1
     else:
         return 0
+    
+#############################################################
+#    OrderOfMagnitude
+#############################################################
+def OrderOfMagnitude( number ):
+    """
+    Function used to find the order of magnitude of a number.
+
+    Args:
+        number (any): the input number.
+
+    Returns:
+        int: the order of magnitude of the number.
+        
+    Testing:
+        >>> OrderOfMagnitude( 1E+10 )
+        10
+        >>> OrderOfMagnitude( 1E-10 )
+        -10
+        >>> OrderOfMagnitude( 145 )
+        2
+    """
+    
+    return math.floor( math.log( number, 10 ) )
+
     
 #################################################
 #     Doing tests

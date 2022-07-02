@@ -24,6 +24,7 @@ def mathematics():
     print( "Parsing ( 3*n*x + i * x ) in x = 1 and n = 2:", mt.e_parser( "3*n*x", "x", 1, 2 ) )
     print()
     print( "kronecker delta for i = 1 and j = 0: ", mt.kronecker( 1, 0 ) )
+    print( "Order of magnitude of {} is {}".format( 123456, mt.OrderOfMagnitude( 123456 ) ) )
 
 #====================================================
 #     Main
