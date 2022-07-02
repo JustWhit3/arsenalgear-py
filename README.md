@@ -141,6 +141,9 @@ arsenalgear/
 
 ## News from the last release
 
+- Added a new function [RemoveOutliers_DF](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#ad8091af135f0399eefd1cf9ff5cb4ff0).
+- Added a new function [OrderOfMagnitude](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a194458ac454c279b4f85b70ddb9141d2).
+- Added a new function [chunker](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1parallelization.html#a7995c580610863b92f988bb23aaa588e).
 - Added Doxygen documentation.
 - Added new functions.
 
