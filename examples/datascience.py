@@ -11,6 +11,7 @@ Author: Gianluca Bianco
 
 # Standard libraries
 import numpy as np
+import pandas as pd
 
 # Arsenalgear libraries
 from arsenalgear import datascience as ds
@@ -23,6 +24,11 @@ def datascience():
     print()
     array = np.array([1, 1, 1, 1, 1, 1, 42, 1, 1])
     print( "Removing outliers from array {}: {}".format( array, ds.RemoveOutliers( array, 2 ) ) )
+    print()
+    df = pd.DataFrame()
+    df = df.append( { "Channel": 0, "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "4": 0, "5": 0, "6": 0, "1": 0, "123412": 0 }, ignore_index = True )
+    print( "Removing outliers from {}".format( df ) )
+    print( "Removed: {}".format( RemoveOutliersDF( df, 1, show_progressb = False ) ) )
 
 #====================================================
 #     Main
