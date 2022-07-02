@@ -2,7 +2,7 @@
 
 <h3 align="center">A library containing general purpose utils.</h3>
 <p align="center">
-    <img title="v1.1" alt="v1.1" src="https://img.shields.io/badge/version-v1.1-informational?style=flat-square"
+    <img title="v1.2" alt="v1.2" src="https://img.shields.io/badge/version-v1.2-informational?style=flat-square"
     <a href="LICENSE">
         <img title="MIT License" alt="license" src="https://img.shields.io/badge/license-MIT-informational?style=flat-square">
     </a>
@@ -16,7 +16,9 @@
 ## Table of contents
 
 - [Introduction](#introduction)
-- [Documentation](#documentation)
+- [Install and run](#install-and-run)
+- [Repository structure](#documentation)
+- [Extra documentation](#extra-documentation)
 - [News from the last release](#news-from-the-last-release)
 - [List of features](#list-of-features)
   - [Data science](#data-science)
@@ -44,7 +46,59 @@ Supported operating systems:
 - Windows 10.
 - MaxOS.
 
-## Documentation
+## Install and run
+
+Steps to be reproduced:
+
+**1)** Download one of the releases of the repository or clone the main branch.
+
+**2)** Unzip and enter the downloaded repository directory.
+
+**3)** Install the library and prerequisites.
+
+```bash
+pip install arsenalgear
+```
+
+> To run examples:
+>
+>```python
+>python examples.py
+>```
+
+**4)** Use in your device
+
+Once you have installed the library you can freely use it in one of your Python projects by including one or more of the modules:
+
+```python
+from arsenalgear import module_name
+```
+
+for example:
+
+```Python
+from arsenalgear import mathematics
+```
+
+**5)** Run the tests (optional):
+
+If you want to run the tests you have to type:
+
+```shell
+python src/arsenalgear/module_name
+```
+
+If anything is displayed it means that tests ran correctly.
+
+Tests have been performed using the [Doctest](https://docs.python.org/3/library/doctest.html) framework.
+
+If you want a detailed tests log printed on the screen, simply enter:
+
+```shell
+python src/arsenalgear/module_name -v
+```
+
+## Repository structure
 
 Repository diagram structure:
 
@@ -69,30 +123,24 @@ arsenalgear/
 │   │   ├── utils.py
 │   ├── setup.py
 │   ├── setup.cfg
-├── doc/
-│   ├── Code structure.md
-│   ├── Contributing.md
-│   ├── Download, install and run.md
 ├── img/
 ├── README.md
 ├── LICENSE
 ├── CITATION.cff
+├── CONTRIBUTING.md
 ├── .gitignore
 ├── .all-contributorsrc
 ```
 
-General documentation:
+## Extra documentation
 
-- [Contributing to the repository](https://github.com/JustWhit3/arsenalgear-py/blob/main/doc/Contributing.md): a generic file containing detailed info about how to open an issue or send a pull request to contribute.
-- [Code structure](https://github.com/JustWhit3/arsenalgear-py/blob/main/doc/Code%20structure.md): contains a detailed list of the `python` objects of the repository and how to use them.
-- [Download, install and run](https://github.com/JustWhit3/arsenalgear-py/blob/main/doc/Download%2C%20install%20and%20run.md): contains instructions about how to install, download and run the repository code.
+- [Contributing to the repository](https://github.com/JustWhit3/arsenalgear-py/blob/main/CONTRIBUTING.md): a generic file containing detailed info about how to open an issue or send a pull request to contribute.
+- [Code documentation](https://justwhit3.github.io/arsenalgear-py/index.html): code documentation has been generated using Doxygen.
 
 ## News from the last release
 
-- Python package version has been added to PyPi.
-- Module datascience has been provided.
-- Module utils has been provided.
-- Module parallelization has been provided.
+- Added Doxygen documentation.
+- Added new functions.
 
 ## List of features
 
@@ -100,32 +148,32 @@ Here you can find the list of features implemented in the current version of the
 
 ### Data science
 
-- [AMS_score](): function used to retrieve the AMS score.
-- [RemoveOutliers](): function used to remove the outliers of an array.
+- [AMS_score](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#a0763a5d9063ba2ad2f02afeb27dbebf1): function used to retrieve the AMS score.
+- [RemoveOutliers](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#a5e0b3384380b048873103f8b29f0af9c): function used to remove the outliers of an array.
 
 ### Mathematics
 
-- [Hermite](): function used to retrieve Hermite polynomials values.
-- [Chebyshev](): function used to retrieve Chebyshev polynomials values.
-- [Legendre](): function used to retrieve Legendre polynomials values.
-- [Laguerre](): function used to retrieve Laguerre polynomials values.
-- [IsInBounds](): function used to check if a value is in a certain bound or not.
-- [e_parser](): function used to return the complex value of a parsed expression.
-- [kronecker](): function used to compute the Kronecker delta.
+- [Hermite](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a13b6c046844f01db40eba86d5bfc444a): function used to retrieve Hermite polynomials values.
+- [Chebyshev](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#af8f1f1077fe6a2122d0e3966d018024d): function used to retrieve Chebyshev polynomials values.
+- [Legendre](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#aecf04044cf0ab973d20fbb9dc987b5dc): function used to retrieve Legendre polynomials values.
+- [Laguerre](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a53074055544eedb8978dc3d769625552): function used to retrieve Laguerre polynomials values.
+- [IsInBounds](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a5e46216eda407e1b2f7d41174349fdfb): function used to check if a value is in a certain bound or not.
+- [e_parser](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#afca1150afc0f3a661662e0e92ef9d0d3): function used to return the complex value of a parsed expression.
+- [kronecker](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a18ed877a011ff6caa380e11964b40dd5): function used to compute the Kronecker delta.
 
 ### Parallelization
 
-- [MultiProcesses](): function used to parallelize more functions.
+- [MultiProcesses](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1parallelization.html#aaa6a5e0f47866f0584b64255518efcd8): function used to parallelize more functions.
 
 ### Plotter
 
-- [plot_AMS](): function used to plot the AMS score.
-- [plotter_complex](): function used to plot a given function for an index n.
+- [plot_AMS](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1plotter.html#ad6d1642cee8c1d9bdc9dbd733c5da6f3): function used to plot the AMS score.
+- [plotter_complex](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1plotter.html#af2555056142e267a7c9cc06467bf20e8): function used to plot a given function for an index n.
 
 ### Utils
 
-- [TimeToInt](): function used to convert a time-string into an integer.
-- [IntToTime](): function used to convert an integer into a time-string.
+- [TimeToInt](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1utils.html#a1848f48fa5574beecead7c9397e7c26c): function used to convert a time-string into an integer.
+- [IntToTime](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1utils.html#a9f4c99effed79a774bf6ad5f74c3f0ae): function used to convert an integer into a time-string.
 
 ## Credits
 
