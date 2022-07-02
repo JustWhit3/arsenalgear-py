@@ -22,6 +22,8 @@ def process_2():
 def parallelization():
     print( "Parallelizing two processes: " )
     paral.MultiProcesses( process_1, process_2 )
+    print()
+    print( "For chunker function see example here https://gitlab.cern.ch/gbianco/DCSAnalysis/-/blob/master/scripts/plotVarTime_corr/plotVarTime_corr.py" )
 
 #====================================================
 #     Main

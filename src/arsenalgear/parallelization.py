@@ -11,6 +11,7 @@ Author: Gianluca Bianco
 import multiprocessing as multi
 import numpy as np
 import doctest
+import itertools
 
 #################################################
 #     MultiProcesses
@@ -35,6 +36,32 @@ def MultiProcesses( *functions ):
     # Joining processes
     for process in processes:
       process.join()
+
+#############################################################
+#    chunker
+#############################################################
+def chunker( it, size ):
+    """
+    Function uses to allow the selection of a bunch of jobs to be executed in parallel.
+
+    Args:
+        it (any): a list of objects through which iterate.
+        size (int): the amount of jobs to be executed in parallel.
+
+    Yields:
+        tuple: a tuple used for iteration.
+    """
+    
+    # Variables
+    it = iter( it )
+    
+    # Selecting a bunch of jobs
+    while True:
+        p = tuple( itertools.islice( it, size ) )
+        if not p:
+            break
+        yield p
+
       
 #################################################
 #     Doing tests

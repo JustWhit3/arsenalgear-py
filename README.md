@@ -9,7 +9,9 @@
 	<img title="Python 3.8.10" alt="Python 3.8.10" src="https://img.shields.io/badge/Python-3.8.10-informational?style=flat-square"><br>
 	<img title="Code size" alt="code size" src="https://img.shields.io/github/languages/code-size/JustWhit3/arsenalgear-py?color=red">
 	<img title="Repo size" alt="repo size" src="https://img.shields.io/github/repo-size/JustWhit3/arsenalgear-py?color=red">
-	<img title="Lines of code" alt="total lines" src="https://img.shields.io/tokei/lines/github/JustWhit3/arsenalgear-py?color=red">
+	<img title="Lines of code" alt="total lines" src="https://img.shields.io/tokei/lines/github/JustWhit3/arsenalgear-py?color=red"><br/>
+  <img title="codeq" alt="codeq" src="https://github.com/JustWhit3/arsenalgear-py/actions/workflows/codeql-analysis.yml/badge.svg">
+  <img title="codeq" alt="codeq" src="https://github.com/JustWhit3/arsenalgear-py/actions/workflows/DocGenerator.yml/badge.svg">
 
 ***
 
@@ -160,6 +162,7 @@ Here you can find the list of features implemented in the current version of the
 - [IsInBounds](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a5e46216eda407e1b2f7d41174349fdfb): function used to check if a value is in a certain bound or not.
 - [e_parser](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#afca1150afc0f3a661662e0e92ef9d0d3): function used to return the complex value of a parsed expression.
 - [kronecker](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a18ed877a011ff6caa380e11964b40dd5): function used to compute the Kronecker delta.
+- [OrderOfMagnitude](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a194458ac454c279b4f85b70ddb9141d2): function used to find the order og magnitude of a number.
 
 ### Parallelization
 
