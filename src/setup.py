@@ -15,8 +15,8 @@ from setuptools import find_packages, setup
 setup(
     name = "arsenalgear",
     packages = find_packages( include = [ "arsenalgear" ] ),
-    version = "1.0.1",
-    description = "A library containing general purpose utils I developed for other projects, using different languages",
+    version = "1.2.0",
+    description = "A library containing general purpose Python utils",
     author = "Gianluca Bianco",
     author_email = 'biancogianluca9@gmail.com',
     url = 'https://justwhit3.github.io/', 
@@ -27,6 +27,7 @@ setup(
                         "numpy>=1.17.4", 
                         "scipy==1.6.2",
                         "termcolor==1.1.0"
+                        "tqdm>=4.64.0"
                        ],
     classifiers=[
       'Development Status :: 4 - Beta',
