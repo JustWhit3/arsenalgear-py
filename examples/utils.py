@@ -1,31 +1,35 @@
 #!/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Ape 15 12:28:00 2022
+Created on Fri Jul 2 10:58:00 2022
 Author: Gianluca Bianco
 """
+
 #====================================================
 #     MODULES
 #====================================================
-
-# Standard libraries
-import numpy as np
-
-# Arsenalgear libraries
-from arsenalgear import plotter as pt
-
+from arsenalgear import utils
+  
 #====================================================
-#     Plotter
+#     Parallelization
 #====================================================
-def plotter():
-    print( "Plotting cos(x) + i + sin(x): " )
-    pt.plotter_complex( "np.cos(x)", "np.sin(x)", 0, np.pi, 0, 1 )
+def utils():
+    
+    # TimeToInt
+    time_str = "2022-04-12 16:23:45"
+    time_int = utils.TimeToInt( time_str )
+    print( "Converting \"{}\" into an int: {}".format( time_str, time_int ) )
+    
+    # IntToTime
+    time_int = 20220412162345
+    time_str = utils.IntToTime( time_int )
+    print( "Reconverting {} into a string: \"{}\"".format( time_int, time_str ) )
 
 #====================================================
 #     Main
 #====================================================
 def main():
-    plotter()
+    utils()
         
 if __name__ == "__main__":
     main()

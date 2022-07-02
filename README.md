@@ -19,6 +19,10 @@
 - [Documentation](#documentation)
 - [News from the last release](#news-from-the-last-release)
 - [List of features](#list-of-features)
+  - [Data science](#data-science)
+  - [Mathematics](#mathematics)
+  - [Parallelization](#parallelization)
+  - [Plotter](#plotter)
 - [Credits](#credits)
   - [Project leaders](#project-leaders)
 
@@ -46,22 +50,32 @@ Repository diagram structure:
 
 ```txt
 arsenalgear/
+├── .github/
+│   ├── workflows/
+│   │   ├── codeql-analysis.yml
+├── examples/
+│   ├── datascience.py
+│   ├── mathematics.py
+│   ├── parallelization.py
+│   ├── plotter.py
+│   ├── utils.py
 ├── src/
 │   ├── arsenalgear/
 │   │   ├── __init__.py
 │   │   ├── mathematics.py
 │   │   ├── plotter.py
-│   │   ├── machinelearning.py
-│   ├── examples.py
+│   │   ├── datascience.py
+│   │   ├── parallelization.py
+│   │   ├── utils.py
 │   ├── setup.py
 │   ├── setup.cfg
 ├── doc/
 │   ├── Code structure.md
+│   ├── Contributing.md
 │   ├── Download, install and run.md
 ├── img/
 ├── README.md
 ├── LICENSE
-├── CONTRIBUTING.md
 ├── CITATION.cff
 ├── .gitignore
 ├── .all-contributorsrc
@@ -84,9 +98,34 @@ General documentation:
 
 Here you can find the list of features implemented in the current version of the library:
 
-- [Math](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear-py/mathematics.hpp): contains a list of mathematical tools.
-- [Machine learning](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear-py/machinelearning.hpp): contains a list of machine learning tools.
-- [Plotting tools](https://github.com/JustWhit3/arsenalgear-py/blob/main/src/arsenalgear-py/plotter.hpp): contains a list of plotting tools.
+### Data science
+
+- [AMS_score](): function used to retrieve the AMS score.
+- [RemoveOutliers](): function used to remove the outliers of an array.
+
+### Mathematics
+
+- [Hermite](): function used to retrieve Hermite polynomials values.
+- [Chebyshev](): function used to retrieve Chebyshev polynomials values.
+- [Legendre](): function used to retrieve Legendre polynomials values.
+- [Laguerre](): function used to retrieve Laguerre polynomials values.
+- [IsInBounds](): function used to check if a value is in a certain bound or not.
+- [e_parser](): function used to return the complex value of a parsed expression.
+- [kronecker](): function used to compute the Kronecker delta.
+
+### Parallelization
+
+- [MultiProcesses](): function used to parallelize more functions.
+
+### Plotter
+
+- [plot_AMS](): function used to plot the AMS score.
+- [plotter_complex](): function used to plot a given function for an index n.
+
+### Utils
+
+- [TimeToInt](): function used to convert a time-string into an integer.
+- [IntToTime](): function used to convert an integer into a time-string.
 
 ## Credits
 
