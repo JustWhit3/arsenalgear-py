@@ -15,18 +15,18 @@ from setuptools import find_packages, setup
 setup(
     name = "arsenalgear",
     packages = find_packages( include = [ "arsenalgear" ] ),
-    version = "1.2.0",
+    version = "1.2.2",
     description = "A library containing general purpose Python utils",
     author = "Gianluca Bianco",
     author_email = 'biancogianluca9@gmail.com',
     url = 'https://justwhit3.github.io/', 
-    download_url = 'https://github.com/JustWhit3/arsenalgear/archive/refs/tags/v1.0.0.zip',
+    download_url = 'https://github.com/JustWhit3/arsenalgear/archive/refs/tags/v1.2.2.zip',
     license = "MIT",
     install_requires = [ 
                         "matplotlib>=3.1.2", 
                         "numpy>=1.17.4", 
                         "scipy==1.6.2",
-                        "termcolor==1.1.0"
+                        "termcolor==1.1.0",
                         "tqdm>=4.64.0"
                        ],
     classifiers=[

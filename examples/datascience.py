@@ -27,8 +27,8 @@ def datascience():
     print()
     df = pd.DataFrame()
     df = df.append( { "Channel": 0, "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "4": 0, "5": 0, "6": 0, "1": 0, "123412": 0 }, ignore_index = True )
-    print( "Removing outliers from {}".format( df ) )
-    print( "Removed: {}".format( ds.RemoveOutliersDF( df, 1, show_progressb = False ) ) )
+    print( "Removing outliers from:\n {}".format( df ) )
+    print( "Removed:\n {}".format( ds.RemoveOutliersDF( df, 1, show_progressb = False ) ) )
 
 #====================================================
 #     Main
