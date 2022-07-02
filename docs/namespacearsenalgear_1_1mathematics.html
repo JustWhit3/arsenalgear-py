@@ -94,6 +94,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a18ed877a011ff6caa380e11964b40dd5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1mathematics.html#a18ed877a011ff6caa380e11964b40dd5">kronecker</a> (i, j)</td></tr>
 <tr class="memdesc:a18ed877a011ff6caa380e11964b40dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">"kronecker" function  <a href="namespacearsenalgear_1_1mathematics.html#a18ed877a011ff6caa380e11964b40dd5">More...</a><br /></td></tr>
 <tr class="separator:a18ed877a011ff6caa380e11964b40dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194458ac454c279b4f85b70ddb9141d2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1mathematics.html#a194458ac454c279b4f85b70ddb9141d2">OrderOfMagnitude</a> (number)</td></tr>
+<tr class="memdesc:a194458ac454c279b4f85b70ddb9141d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">OrderOfMagnitude.  <a href="namespacearsenalgear_1_1mathematics.html#a194458ac454c279b4f85b70ddb9141d2">More...</a><br /></td></tr>
+<tr class="separator:a194458ac454c279b4f85b70ddb9141d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="af8f1f1077fe6a2122d0e3966d018024d"></a>
@@ -416,6 +419,41 @@ Returns:
     
 Testing:
     Already tested in some functions of the "functions.py" library.
+</pre> 
+</div>
+</div>
+<a id="a194458ac454c279b4f85b70ddb9141d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194458ac454c279b4f85b70ddb9141d2">&#9670;&nbsp;</a></span>OrderOfMagnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def arsenalgear.mathematics.OrderOfMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OrderOfMagnitude. </p>
+<pre class="fragment">Function used to find the order of magnitude of a number.
+
+Args:
+    number (any): the input number.
+
+Returns:
+    int: the order of magnitude of the number.
+    
+Testing:
+    &gt;&gt;&gt; OrderOfMagnitude( 1E+10 )
+    10
+    &gt;&gt;&gt; OrderOfMagnitude( 1E-10 )
+    -10
+    &gt;&gt;&gt; OrderOfMagnitude( 145 )
+    2
 </pre> 
 </div>
 </div>

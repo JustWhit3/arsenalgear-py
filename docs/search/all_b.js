@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timetoint_22',['TimeToInt',['../namespacearsenalgear_1_1utils.html#a1848f48fa5574beecead7c9397e7c26c',1,'arsenalgear::utils']]]
+  ['removeoutliers_22',['RemoveOutliers',['../namespacearsenalgear_1_1datascience.html#a5e0b3384380b048873103f8b29f0af9c',1,'arsenalgear::datascience']]]
 ];
