@@ -8,7 +8,7 @@ Author: Gianluca Bianco
 #====================================================
 #     MODULES
 #====================================================
-from arsenalgear import utils
+from arsenalgear.utils import TimeToInt, IntToTime
   
 #====================================================
 #     Parallelization
@@ -16,14 +16,14 @@ from arsenalgear import utils
 def utils():
     
     # TimeToInt
-    time_str = "2022-04-12 16:23:45"
-    time_int = utils.TimeToInt( time_str )
-    print( "Converting \"{}\" into an int: {}".format( time_str, time_int ) )
+    time_str_1 = "2022.03.14 09:20:00"
+    time_int_1 = TimeToInt( time_str_1 )
+    print( "Converting \"{}\" into an int: {}".format( time_str_1, time_int_1 ) )
     
     # IntToTime
-    time_int = 20220412162345
-    time_str = utils.IntToTime( time_int )
-    print( "Reconverting {} into a string: \"{}\"".format( time_int, time_str ) )
+    time_int_2 = 20220314092000
+    time_str_2 = IntToTime( time_int_2 )
+    print( "Reconverting {} into a string: \"{}\"".format( time_int_2, time_str_2 ) )
 
 #====================================================
 #     Main
