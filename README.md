@@ -20,7 +20,6 @@
 - [Introduction](#introduction)
 - [Install and run](#install-and-run)
 - [Extra documentation](#extra-documentation)
-- [News from the last release](#news-from-the-last-release)
 - [List of features](#list-of-features)
   - [Data science](#data-science)
   - [Mathematics](#mathematics)
@@ -51,11 +50,7 @@ Supported operating systems:
 
 Steps to be reproduced:
 
-**1)** Download one of the releases of the repository or clone the main branch.
-
-**2)** Unzip and enter the downloaded repository directory.
-
-**3)** Install the library and prerequisites.
+**1)** Install the library and prerequisites.
 
 ```bash
 pip install arsenalgear
@@ -67,7 +62,7 @@ pip install arsenalgear
 >python examples.py
 >```
 
-**4)** Use in your device
+**2)** Use in your device
 
 Once you have installed the library you can freely use it in one of your Python projects by including one or more of the modules:
 
@@ -81,7 +76,7 @@ for example:
 from arsenalgear import mathematics
 ```
 
-**5)** Run the tests (optional):
+**3)** Run the tests (optional):
 
 If you want to run the tests you have to type:
 
@@ -104,17 +99,7 @@ python src/arsenalgear/module_name -v
 - [Contributing to the repository](https://github.com/JustWhit3/arsenalgear-py/blob/main/CONTRIBUTING.md): a generic file containing detailed info about how to open an issue or send a pull request to contribute.
 - [Code documentation](https://justwhit3.github.io/arsenalgear-py/index.html): code documentation has been generated using Doxygen.
 
-## News from the last release
-
-- Added a new function [`RemoveOutliers_DF`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1datascience.html#ad8091af135f0399eefd1cf9ff5cb4ff0).
-- Added a new function [`OrderOfMagnitude`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1mathematics.html#a194458ac454c279b4f85b70ddb9141d2).
-- Added a new function [`chunker`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1parallelization.html#a7995c580610863b92f988bb23aaa588e).
-- Added Doxygen documentation.
-- Added new functions.
-
 ## List of features
-
-Here you can find the list of features implemented in the current version of the library:
 
 ### Data science
 
