@@ -77,11 +77,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad6d1642cee8c1d9bdc9dbd733c5da6f3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1plotter.html#ad6d1642cee8c1d9bdc9dbd733c5da6f3">plot_AMS</a> (predictions, label_vectors, weights)</td></tr>
-<tr class="memdesc:ad6d1642cee8c1d9bdc9dbd733c5da6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">"plot_AMS" function  <a href="namespacearsenalgear_1_1plotter.html#ad6d1642cee8c1d9bdc9dbd733c5da6f3">More...</a><br /></td></tr>
+<tr class="memdesc:ad6d1642cee8c1d9bdc9dbd733c5da6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">plot_AMS  <a href="namespacearsenalgear_1_1plotter.html#ad6d1642cee8c1d9bdc9dbd733c5da6f3">More...</a><br /></td></tr>
 <tr class="separator:ad6d1642cee8c1d9bdc9dbd733c5da6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2555056142e267a7c9cc06467bf20e8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1plotter.html#af2555056142e267a7c9cc06467bf20e8">plotter_complex</a> (real_part, imaginary_part, a, b, n, coefficient)</td></tr>
-<tr class="memdesc:af2555056142e267a7c9cc06467bf20e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">"plotter_complex" function  <a href="namespacearsenalgear_1_1plotter.html#af2555056142e267a7c9cc06467bf20e8">More...</a><br /></td></tr>
+<tr class="memdesc:af2555056142e267a7c9cc06467bf20e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">plotter_complex  <a href="namespacearsenalgear_1_1plotter.html#af2555056142e267a7c9cc06467bf20e8">More...</a><br /></td></tr>
 <tr class="separator:af2555056142e267a7c9cc06467bf20e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aac49421888ff46f8a7224b8e69937a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1plotter.html#a8aac49421888ff46f8a7224b8e69937a">plot_learning_curve</a> (estimator, title, X, y, axes=None, ylim=None, cv=None, n_jobs=None, scoring=None, train_sizes=np.linspace(0.1, 1.0, 5))</td></tr>
+<tr class="memdesc:a8aac49421888ff46f8a7224b8e69937a"><td class="mdescLeft">&#160;</td><td class="mdescRight">plot_learning_curve  <a href="namespacearsenalgear_1_1plotter.html#a8aac49421888ff46f8a7224b8e69937a">More...</a><br /></td></tr>
+<tr class="separator:a8aac49421888ff46f8a7224b8e69937a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad6d1642cee8c1d9bdc9dbd733c5da6f3"></a>
@@ -116,13 +119,107 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>"plot_AMS" function </p>
+<p>plot_AMS </p>
 <pre class="fragment">Function used to plot the AMS function.
 
 Args:
     predictions ( numpy array ): is a binary array, defined from the set of data that we're considering.
     label_vectors ( numpy array ): is a binary array constructed from the dataset, used for each model, that distinguishes an event between signal and background.
     weights ( numpy array ): it takes the weights associated to each data of my dataset.
+</pre> 
+</div>
+</div>
+<a id="a8aac49421888ff46f8a7224b8e69937a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aac49421888ff46f8a7224b8e69937a">&#9670;&nbsp;</a></span>plot_learning_curve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def arsenalgear.plotter.plot_learning_curve </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>estimator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>axes</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ylim</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cv</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n_jobs</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>scoring</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>train_sizes</em> = <code>np.linspace(&#160;0.1,&#160;1.0,&#160;5&#160;)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>plot_learning_curve </p>
+<pre class="fragment">Generate 3 plots: the test and training learning curve, the training samples vs fit times curve, the fit times vs score curve. Taken from here: https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html.
+Args:
+    estimator (sklearn): An estimator instance implementing `fit` and `predict` methods which
+    will be cloned for each validation.
+    title (str): Title for the chart.
+    X (numpy.array): array-like of shape (n_samples, n_features). Training vector, where ``n_samples`` is the number of samples and
+    ``n_features`` is the number of features.
+    y (numpy.array): array-like of shape (n_samples) or (n_samples, n_features). Target relative to ``X`` for classification or regression;
+    axes (numpy.array, optional): array-like of shape (3,). Axes to use for plotting the curves. Defaults to None.
+    ylim (numpy.array, optional): tuple of shape (2,). Defines minimum and maximum y-values plotted, e.g. (ymin, ymax). Defaults to None.
+    cv (int, optional): cross-validation generator or an iterable. Determines the cross-validation splitting strategy.
+    Possible inputs for cv are:. Defaults to None.
+    n_jobs (int, optional): nt or None. Number of jobs to run in parallel. Defaults to None.
+    scoring (str, optional): a str (see model evaluation documentation) or a scorer callable object / function with signature
+    ``scorer(estimator, X, y)``.. Defaults to None.
+    train_sizes (numpy.array, optional): array-like of shape (n_ticks,). Relative or absolute numbers of training examples that will be used to generate the learning curve.. Defaults to np.linspace( 0.1, 1.0, 5 ).
 </pre> 
 </div>
 </div>
@@ -176,7 +273,7 @@ Args:
       </table>
 </div><div class="memdoc">
 
-<p>"plotter_complex" function </p>
+<p>plotter_complex </p>
 <pre class="fragment">Function used to plot a given function for an index n.
 Args:
     real_part (string): mathematical real expression part.

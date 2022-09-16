@@ -82,6 +82,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f4c99effed79a774bf6ad5f74c3f0ae"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1utils.html#a9f4c99effed79a774bf6ad5f74c3f0ae">IntToTime</a> (time_int)</td></tr>
 <tr class="memdesc:a9f4c99effed79a774bf6ad5f74c3f0ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">IntToTime.  <a href="namespacearsenalgear_1_1utils.html#a9f4c99effed79a774bf6ad5f74c3f0ae">More...</a><br /></td></tr>
 <tr class="separator:a9f4c99effed79a774bf6ad5f74c3f0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e7c8346eb2f207ed45ac0527ffa9dd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearsenalgear_1_1utils.html#a90e7c8346eb2f207ed45ac0527ffa9dd">save_img</a> (img_name, save_path, tight=False)</td></tr>
+<tr class="memdesc:a90e7c8346eb2f207ed45ac0527ffa9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">save_img  <a href="namespacearsenalgear_1_1utils.html#a90e7c8346eb2f207ed45ac0527ffa9dd">More...</a><br /></td></tr>
+<tr class="separator:a90e7c8346eb2f207ed45ac0527ffa9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a9f4c99effed79a774bf6ad5f74c3f0ae"></a>
@@ -114,6 +117,54 @@ Testing:
     '2022.03.14 09:20:00'
     &gt;&gt;&gt; IntToTime( 20220314094000 )
     '2022.03.14 09:40:00'
+</pre> 
+</div>
+</div>
+<a id="a90e7c8346eb2f207ed45ac0527ffa9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e7c8346eb2f207ed45ac0527ffa9dd">&#9670;&nbsp;</a></span>save_img()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def arsenalgear.utils.save_img </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>img_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>save_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tight</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>save_img </p>
+<pre class="fragment">Function used to save a specific plot "img_name" into a specific directory "save_path".
+Args:
+    img_name (str): The name of the plot to be saved. No file extension needed.
+    save_path (str): The path in which the plot should be saved.
+    tight (bool, optional): Set "tight" option for plot into True or False. Default to False.
+
+Testing:
+    &gt;&gt;&gt; a = [ 1, 2, 3, 4 ]
+    &gt;&gt;&gt; _ = plt.plot( a )
+    &gt;&gt;&gt; save_img( "save_img_test", "../../img/tests" )
+    &gt;&gt;&gt; os.path.exists( "../img/tests/save_img_test.png" )
+    True
 </pre> 
 </div>
 </div>
