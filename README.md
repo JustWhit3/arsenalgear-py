@@ -2,16 +2,16 @@
 
 <h3 align="center">A library containing general purpose utils.</h3>
 <p align="center">
-    <img title="v1.2" alt="v1.2" src="https://img.shields.io/badge/version-v1.2-informational?style=flat-square"
+    <img title="v1.3" alt="v1.3" src="https://img.shields.io/badge/version-v1.3-informational?style=flat-square"
     <a href="LICENSE">
         <img title="MIT License" alt="license" src="https://img.shields.io/badge/license-MIT-informational?style=flat-square">
     </a>
-	<img title="Python 3.8.10" alt="Python 3.8.10" src="https://img.shields.io/badge/Python-3.8.10-informational?style=flat-square"><br>
+	<img title="Python 3.10.4" alt="Python 3.10.4" src="https://img.shields.io/badge/Python-3.10.4-informational?style=flat-square"><br>
 	<img title="Code size" alt="code size" src="https://img.shields.io/github/languages/code-size/JustWhit3/arsenalgear-py?color=red">
 	<img title="Repo size" alt="repo size" src="https://img.shields.io/github/repo-size/JustWhit3/arsenalgear-py?color=red">
 	<img title="Lines of code" alt="total lines" src="https://img.shields.io/tokei/lines/github/JustWhit3/arsenalgear-py?color=red"><br/>
   <img title="codeq" alt="codeq" src="https://github.com/JustWhit3/arsenalgear-py/actions/workflows/codeql-analysis.yml/badge.svg">
-  <img title="codeq" alt="codeq" src="https://github.com/JustWhit3/arsenalgear-py/actions/workflows/DocGenerator.yml/badge.svg">
+  <img title="DocGenerator" alt="DocGenerator" src="https://github.com/JustWhit3/arsenalgear-py/actions/workflows/DocGenerator.yml/badge.svg">
 
 ***
 
@@ -127,11 +127,13 @@ python src/arsenalgear/module_name -v
 
 - [`plot_AMS`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1plotter.html#ad6d1642cee8c1d9bdc9dbd733c5da6f3): function used to plot the AMS score.
 - [`plotter_complex`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1plotter.html#af2555056142e267a7c9cc06467bf20e8): function used to plot a given function for an index n.
+- [`plot_learning_curve`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1plotter.html#a8aac49421888ff46f8a7224b8e69937a): function used to plot a learning curves for train and tests sets of a dataset.
 
 ### Utils
 
 - [`TimeToInt`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1utils.html#a1848f48fa5574beecead7c9397e7c26c): function used to convert a time-string into an integer.
 - [`IntToTime`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1utils.html#a9f4c99effed79a774bf6ad5f74c3f0ae): function used to convert an integer into a time-string.
+- [`save_img`](https://justwhit3.github.io/arsenalgear-py/namespacearsenalgear_1_1utils.html#a90e7c8346eb2f207ed45ac0527ffa9dd): function used to save an image in a certain position of the system.
 
 ## Credits
 
