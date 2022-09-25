@@ -24,7 +24,7 @@ setup(
     license = "MIT",
     install_requires = [ 
                         "matplotlib==3.5.1",
-                        "numpy==1.21.5",
+                        "numpy>=1.22",
                         "scikit_learn==1.1.2",
                         "scipy==1.8.0",
                         "setuptools==59.6.0",
