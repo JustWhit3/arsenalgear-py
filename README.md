@@ -27,6 +27,7 @@
   - [Plotter](#plotter)
 - [Credits](#credits)
   - [Project leaders](#project-leaders)
+- [Stargazers over time](#stargazers-over-time)
 
 ## Introduction
 
@@ -148,3 +149,7 @@ python src/arsenalgear/module_name -v
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/JustWhit3/arsenalgear-py.svg)](https://starchart.cc/JustWhit3/arsenalgear-py)
