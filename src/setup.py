@@ -27,7 +27,7 @@ setup(
                         "numpy>=1.22",
                         "scikit_learn==1.1.2",
                         "scipy==1.8.0",
-                        "setuptools==59.6.0",
+                        "setuptools>=65.5.1",
                         "termcolor==1.1.0",
                         "tqdm==4.64.0"
                        ],
